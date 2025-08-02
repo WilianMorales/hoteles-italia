@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
+import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,9 @@ import { TranslateService } from '../../services/translate.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
+
+  iconCampana = faBell ;
+  iconStart = faStar;
 
   images = [
     { src: 'assets/img/recepcion-7enero.jpg', alt: 'Imagen 1' },
