@@ -1,0 +1,26 @@
+.btn-reservar-scrolled {
+  background-color: white;
+  color: #374151; /* text-gray-700 */
+  border: 1px solid #4b5563 !important; /* gray-600 */
+  border-radius: 2rem;
+  box-shadow: none;
+}
+
+.btn-reservar-default {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white !important;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reservar-scrolled:hover {
+  background-color: #374151;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-reservar-default:hover {
+  background-color: white;
+  color: #374151;
+}

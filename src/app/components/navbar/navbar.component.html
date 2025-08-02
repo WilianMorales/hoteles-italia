@@ -1,0 +1,85 @@
+<nav [ngClass]="{'bg-white shadow-md rounded-2xl lg:mx-36 mx-2 mt-4': scrolled, 'bg-transparent': !scrolled}"
+  class="fixed w-auto left-0 right-0 z-50 transition-all duration-300">
+
+  <div class="container mx-auto flex justify-between items-center py-4 px-4">
+
+    <!--Bloque imagen logo-->
+    <a routerLink="/" class="flex items-center">
+      <img [src]="scrolled ? 'assets/img/Recurso3.svg' : 'assets/img/Recurso3-blanco.svg'"
+        alt="Hotel Italia" class="h-10 w-auto transition-all duration-300">
+    </a>
+
+    <!--Bloque centro: enlaces-->
+    <div class="hidden lg:flex flex-1 justify-center space-x-8">
+      <a *ngFor="let link of links" [routerLink]="link.path"
+        [ngClass]="{'text-gray-700': scrolled, 'text-white':!scrolled}" class="transition-colors text-lg">{{
+        translate.t(link.key) }}</a>
+    </div>
+
+    <div class="flex items-center gap-4">
+
+      <!-- Botón deslizable de idioma -->
+      <button (click)="changeLang(currentLang === 'es' ? 'en' : 'es')"
+        class="relative w-16 h-7 flex items-center bg-gray-300 rounded-full p-1 transition-all duration-300">
+
+        <!-- Círculo que se desliza -->
+        <div
+          class="absolute left-1 flex items-center justify-center w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300"
+          [ngClass]="{'translate-x-8': currentLang === 'es'}">
+          <img [src]="currentLang === 'en' ? 'assets/img/pe.png' : 'assets/img/en.png'" alt="Bandera"
+            class="w-5 h-5 rounded-full">
+        </div>
+
+        <!-- Texto ES -->
+        <span class="absolute left-10 text-xs font-bold text-gray-800 transition-opacity duration-300"
+          [ngClass]="{'opacity-100': currentLang === 'en', 'opacity-0': currentLang === 'es'}">
+          ES
+        </span>
+
+        <!-- Texto EN -->
+        <span class="absolute right-10 text-xs font-bold text-gray-800 transition-opacity duration-300"
+          [ngClass]="{'opacity-0': currentLang === 'en', 'opacity-100': currentLang === 'es'}">
+          EN
+        </span>
+      </button>
+      <!-- Botón Reservar -->
+      <button [ngClass]="{'btn-reservar-scrolled': scrolled,
+                          'btn-reservar-default': !scrolled }"
+        class="px-4 py-2 rounded-xl transition-all duration-300 font-humanist font-medium">
+        {{ translate.t('navbar.reservar') }}
+      </button>
+
+      <!-- Botón de menú para pantallas pequeñas -->
+      <button (click)="toggleMenu()" class="lg:hidden focus:outline-none">
+        <svg [ngClass]="{'text-white': !scrolled, 'text-gray-600': scrolled }" class="w-8 h-8" fill="none"
+          stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path *ngIf="!menuOpen" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div *ngIf="menuOpen"
+      class="lg:hidden fixed inset-0 bg-black bg-opacity-95 text-white flex flex-col justify-between z-[9999] p-6 transition-transform duration-300">
+      <button (click)="toggleMenu()" class="absolute top-6 right-6 focus:outline-none">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="flex justify-center mt-4">
+        <img src="assets/img/hoteles-italia-logo-blanco.svg" alt="Logo" class="h-36">
+      </div>
+      <div class="flex flex-col items-center space-y-6 mb-8">
+        <a *ngFor="let link of links" [routerLink]="link.path"
+          class="text-xl font-semibold hover:text-gray-300 transition" (click)="menuOpen = false">
+          {{ translate.t(link.key) }}
+        </a>
+      </div>
+      <div class="text-sm text-white text-center">
+        © 2025 Hoteles Italia — Todos los derechos reservados
+      </div>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "inicio": "Inicio",
+    "habitaciones": "Habitaciones",
+    "tarifas": "Tarifas",
+    "servicios": "Servicios",
+    "ubicanos": "Ubícanos",
+    "contacto": "Contacto",
+    "reservar": "Reservar"
+  },
+  "home": {
+    "title": "Bienvenido a Hotel Italia",
+    "description": "Confort en el corazón de Chiclayo",
+    "button": "Ver Habitaciones",
+    "title2": "Tu Lugar en Chiclayo",
+    "service1": "Ubicación céntrica",
+    "description1": "Estamos ubicados en el corazón de Chiclayo, cerca de los principales puntos de interés.",
+    "service2": "Seguridad 24/7",
+    "description2": "Tu seguridad es nuestra prioridad, contamos con vigilancia las 24 horas.",
+    "service3": "Mejor Precio",
+    "description3": "Ofrecemos las mejores tarifas garantizadas para tu comodidad.",
+    "service4": "Comodidad Conectada",
+    "description4": "Disfruta de Wi-Fi rápido y estable en todo el hotel, en nuestras habitaciones y áreas comunes.",
+    "service5": "Puntualidad en Servicios",
+    "description5": "Nos comprometemos a ofrecerte un servicio puntual y de calidad en cada detalle de tu estancia.",
+    "service6": "Comodidad y Limpieza",
+    "description6": "Habitaciones limpias, cómodas y equipadas para que te sientas como en casa."
+  }
+}

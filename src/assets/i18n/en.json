@@ -1,0 +1,29 @@
+{
+  "navbar": {
+    "inicio": "Home",
+    "habitaciones": "Rooms",
+    "tarifas": "Rates",
+    "servicios": "Services",
+    "ubicanos": "Find Us",
+    "contacto": "Contact",
+    "reservar": "Book Now"
+  },
+  "home": {
+    "title": "Welcome to Hotel Italia",
+    "description": "Comfort in the heart of Chiclayo",
+    "button": "View Rooms",
+    "title2": "Your Place in Chiclayo",
+    "service1": "Central Location",
+    "description1": "We are located in the heart of Chiclayo, close to major points of interest.",
+    "service2": "24/7 Security",
+    "description2": "Your security is our priority, we have 24-hour surveillance.",
+    "service3": "Best Price",
+    "description3": "We offer the best guaranteed rates for your comfort.",
+    "service4": "Connected Comfort",
+    "description4": "Enjoy fast and stable Wi-Fi throughout the hotel, in our rooms and common areas.",
+    "service5": "Timely Service",
+    "description5": "We are committed to providing you with timely and quality service in every detail of your stay.",
+    "service6": "Comfort and Cleanliness",
+    "description6": "Clean, comfortable rooms equipped to make you feel at home."
+  }
+}

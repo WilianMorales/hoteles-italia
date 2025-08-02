@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Humanist521BT';
+  src: url('assets/fonts/Humanist521BT.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roman SD';
+  src: url('assets/fonts/Roman\ SD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('assets/fonts/WorkSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-humanist, h1, p, a, h2, h3{
+  font-family: 'Humanist521BT', sans-serif;
+}
+/*
+ {
+  font-family: 'Work Sans', sans-serif;
+} */
