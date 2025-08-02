@@ -1,4 +1,4 @@
-# 🏨 Hotel Italia - Web Oficial
+# 🏨 Hoteles Italia - Web Oficial
 
 Proyecto desarrollado con **Angular 17** y **Tailwind CSS** para el sitio web del Hotel Italia, ubicado en Chiclayo, Perú.  
 El objetivo es ofrecer una experiencia moderna, responsive y optimizada tanto para **viajes de negocios** como para **turismo**.
