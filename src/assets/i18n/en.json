@@ -9,10 +9,13 @@
     "reservar": "Book Now"
   },
   "home": {
+    "welcome": "Welcome to",
     "title": "Welcome to Hotel Italia",
     "description": "Comfort in the heart of Chiclayo",
-    "button": "View Rooms",
+    "button": "Call",
     "title2": "Your Place in Chiclayo",
+    "subtitle_section": "Discover why Hotel Italia is the preferred choice in Chiclayo",
+    "description_section": "At Hotel Italia, we combine strategic location, comfort, and exceptional service to ensure you have a unique experience, whether for business or pleasure.",
     "service1": "Central Location",
     "description1": "We are located in the heart of Chiclayo, close to major points of interest.",
     "service2": "24/7 Security",

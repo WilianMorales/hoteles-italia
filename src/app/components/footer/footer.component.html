@@ -1,30 +1,69 @@
+<footer class="bg-black text-gray-400 py-10 px-4">
+  <div class="max-w-7xl mx-auto space-y-10">
 
-<footer class="bg-gray-900 text-white py-6">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-
-    <!-- Nombre / Marca -->
-    <div class="text-center md:text-left">
-      <h2 class="text-lg font-semibold">Hotel Italia</h2>
-      <p class="text-sm text-gray-400">© 2025 Todos los derechos reservados.</p>
-    </div>
-
-    <!-- Enlaces rápidos -->
-    <div class="flex space-x-4">
-      <a routerLink="/habitaciones" class="hover:underline">Habitaciones</a>
-      <a routerLink="/servicios" class="hover:underline">Servicios</a>
-      <a routerLink="/contacto" class="hover:underline">Contacto</a>
+    <!-- Links principales -->
+    <div class="flex flex-wrap justify-center gap-6 text-sm uppercase tracking-wide">
+      <a routerLink="/habitaciones" class="hover:text-white transition">Habitaciones</a>
+      <a routerLink="/servicios" class="hover:text-white transition">Servicios</a>
+      <a routerLink="/contacto" class="hover:text-white transition">Contacto</a>
     </div>
 
     <!-- Redes sociales -->
-    <div class="flex space-x-4">
-      <a href="https://facebook.com" target="_blank" class="hover:text-blue-400">
-        <i class="fa-brands fa-facebook-f"></i>
+    <div class="flex justify-center items-center gap-4">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+        class="bg-white/10 w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/20 transition">
+        <fa-icon [icon]="iconFb" class=" text-xl"></fa-icon>
       </a>
-      <a href="https://instagram.com" target="_blank" class="hover:text-pink-400">
-        <i class="fa-brands fa-instagram"></i>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+        class="bg-white/10 w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/20 transition">
+        <fa-icon [icon]="iconGm" class=" text-xl"></fa-icon>
       </a>
-      <a href="https://wa.me/51999999999" target="_blank" class="hover:text-green-400">
-        <i class="fa-brands fa-whatsapp"></i>
+      <a href="#" target="_blank" rel="noopener noreferrer"
+        class="bg-white/10 w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/20 transition">
+        <fa-icon [icon]="iconLocation" class="text-xl"></fa-icon>
+      </a>
+    </div>
+
+    <!-- Direcciones y teléfonos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+
+      <!-- Hotel 1 -->
+      <div class="flex flex-col items-center space-y-2">
+        <div class="flex items-center gap-2">
+          <fa-icon [icon]="iconLocation"></fa-icon>
+          <span>7 de Enero Nº 1374</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <fa-icon [icon]="iconPhone"></fa-icon>
+          <span class="hidden sm:inline">(074) 205 717</span>
+          <a href="tel:+5174205717" class="sm:hidden bg-green-500 px-3 py-1 rounded-lg text-white text-xs">
+            Llamar
+          </a>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="flex flex-col items-center space-y-2">
+        <div class="flex items-center gap-2">
+          <fa-icon [icon]="iconLocation" class=""></fa-icon>
+          <span>Arica Nº 1156</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <fa-icon [icon]="iconPhone"></fa-icon>
+          <span class="hidden sm:inline">(074) 204 417</span>
+          <a href="tel:+5174204417" class="sm:hidden bg-green-500 px-3 py-1 rounded-lg text-white text-xs">
+            Llamar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Derechos -->
+    <div class="text-center text-xs text-gray-500 border-t border-white/10 pt-6">
+      © {{currentYear}} Hoteles Italia — Todos los derechos reservados
+      <a href="https://mauriciovereau.dev" target="_blank" rel="noopener noreferrer"
+        class="text-gray-500 hover:text-white transition">
+        Desarrollado por Mauricio Vereau
       </a>
     </div>
 

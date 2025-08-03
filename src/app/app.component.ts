@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'hotelItalia';
+  title = 'Hoteles Italia';
+
+  iconWsp = faWhatsapp;
+
 }

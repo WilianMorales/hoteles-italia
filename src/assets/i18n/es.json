@@ -9,10 +9,13 @@
     "reservar": "Reservar"
   },
   "home": {
+    "welcome": "Bienvenido a",
     "title": "Bienvenido a Hotel Italia",
     "description": "Confort en el corazón de Chiclayo",
-    "button": "Ver Habitaciones",
+    "button": "Llamar",
     "title2": "Tu Lugar en Chiclayo",
+    "subtitle_section": "Descubre por qué Hotel Italia es la elección preferida en Chiclayo",
+    "description_section": "En Hotel Italia combinamos ubicación estratégica, comodidad y un servicio excepcional para que disfrutes de una experiencia única, ya sea por negocios o placer.",
     "service1": "Ubicación céntrica",
     "description1": "Estamos ubicados en el corazón de Chiclayo, cerca de los principales puntos de interés.",
     "service2": "Seguridad 24/7",
