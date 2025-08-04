@@ -19,10 +19,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   iconLocation = faLocationDot;
   iconPhone = faPhone;
 
-  images = [
-    { src: 'assets/img/recepcion-7enero.jpg', alt: 'Imagen 1' },
-    { src: 'assets/img/personal-calificado.jpg', alt: 'Imagen 2' },
-    { src: 'assets/img/recepcion-arica.jpg', alt: 'Imagen 3' }
+  // images = [
+  //   { src: 'assets/img/recepcion-7enero.jpg', alt: 'Imagen 1' },
+  //   { src: 'assets/img/personal-calificado.jpg', alt: 'Imagen 2' },
+  //   { src: 'assets/img/recepcion-arica.jpg', alt: 'Imagen 3' }
+  // ]
+
+
+   images = [
+    { src: 'assets/img/inicio/recepcion-arica1.jpg', alt: 'Imagen 1' },
+    { src: 'assets/img/inicio/recepcion-arica2.jpg', alt: 'Imagen 1' },
+    { src: 'assets/img/inicio/recepcion-7enero1.jpg', alt: 'Imagen 1' },
+    { src: 'assets/img/inicio/recepcion-7enero2.jpg', alt: 'Imagen 1' },
   ]
 
   currentImageIndex = 0;

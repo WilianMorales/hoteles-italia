@@ -86,6 +86,69 @@
 </section>
 
 <section id="features-section">
+  <div class="bg-gray-200 py-20 lg:py-26 min-h-screen">
+
+    <!-- Contenido centrado -->
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+        Chiclayo: parte de la Ruta del Papa León XIV
+      </h2>
+      <p class="text-gray-600 mb-8">
+        Chiclayo, conocida como la “Capital de la Amistad”, fue hogar pastoral del Papa León XIV.
+        Un lugar donde la historia, la fe y la cultura se encuentran, ideal para tu próxima visita.
+      </p>
+    </div>
+
+    <!-- Lugares en Chiclayo -->
+    <section class="bg-gray-200 py-8">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4">
+
+        <!-- Catedral -->
+        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="assets/img/inicio/ruta-papa/catedral-chiclayo.jpeg" alt="Catedral de Chiclayo"
+            class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Catedral de Chiclayo</h3>
+            <p class="text-gray-600">Centro histórico y cultural, ideal para pasear y disfrutar de la arquitectura.</p>
+          </div>
+        </div>
+
+        <!-- Palacio Municipal -->
+        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="assets/img/inicio/ruta-papa/iglesia-san-pedro.jpg" alt="Iglesia San Pedro de Monsefú"
+            class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Iglesia San Pedro de Monsefú</h3>
+            <p class="text-gray-600">Descubre la rica herencia cultural de Chiclayo a través de sus impresionantes
+              exposiciones.</p>
+          </div>
+        </div>
+
+        <!-- Santurario Virgen de la Paz -->
+        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="assets/img/inicio/ruta-papa/santuario-de-la-paz.png" alt="Mercado Modelo de Chiclayo"
+            class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Santuario Virgen de la Paz</h3>
+            <p class="text-gray-600">Un lugar vibrante para experimentar la vida local y probar la deliciosa
+              gastronomía.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Imagen a todo el ancho -->
+    <div class="w-full">
+      <img src="assets/img/inicio/ruta-papa/ruta-papa.webp" alt="Ruta del Papa León XIV" class="w-full sm:h-96 object-cover">
+    </div>
+
+  </div>
+</section>
+
+
+<section>
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
@@ -162,8 +225,7 @@
           <div class="relative pl-16">
             <dt class="text-base/7 font-semibold text-gray-900">
               <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/cama.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
+                <img src="assets/img/cama.png" alt="Cámara de seguridad" class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
               </div>
               {{translate.t('home.service6')}}
             </dt>
@@ -175,46 +237,4 @@
       </div>
     </div>
   </div>
-
-
 </section>
-
-
-<!-- <section id="features-section" class="bg-gray-200">
-  <div class="container mx-auto p-4 pt-16 xl:pt-20">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl text-center text-gray-700 mb-8"><strong>{{ translate.t('home.title2')
-        }}</strong></h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:mx-24">
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/ubicacion.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service1') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description1') }}</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/camara-de-seguridad.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service2') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description2') }}</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/mejor-precio.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service3') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description3') }}</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/comodidades.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service4') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description4') }}</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/puntualidad.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service5') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description5') }}</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center text-center">
-        <img src="assets/img/cama.png" alt="" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto">
-        <h3 class="text-lg md:text-xl text-gray-600 font-semibold mb-2">{{ translate.t('home.service6') }}</h3>
-        <p class="text-sm md:text-base text-gray-500">{{ translate.t('home.description6') }}</p>
-      </div>
-    </div>
-  </div>
-</section> -->
