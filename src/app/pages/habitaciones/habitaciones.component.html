@@ -1,1 +1,44 @@
-<p>habitaciones works!</p>
+<section id="habitaciones" class="min-h-screen">
+  <!-- Carrusel básico -->
+  <div class="relative w-full h-[300px] sm:h-[500px] overflow-hidden">
+    <div *ngFor="let img of imagenes; let i = index" class="absolute inset-0 transition-opacity duration-1000"
+      [class.opacity-100]="i === currentIndex" [class.opacity-0]="i !== currentIndex">
+      <img [src]="img" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <!-- Precios -->
+  <section id="pricing-section" class="py-16 bg-gray-50">
+    <h2 class="text-center text-3xl font-bold mb-10">Nuestras Tarifas</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+      <div *ngFor="let plan of tarifas" class="bg-white shadow-lg rounded-xl p-6 text-center">
+        <h3 class="text-xl font-semibold">{{ plan.nombre }}</h3>
+        <p class="text-4xl font-bold my-4">S/ {{ plan.precio }}</p>
+        <ul class="text-gray-600 mb-6">
+          <li *ngFor="let item of plan.beneficios" class="mb-2">✔ {{ item }}</li>
+        </ul>
+        <a href="#contacto" class="bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-dark transition">
+          Reservar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-2">
+      <!-- Título -->
+      <h2 class="text-center text-3xl font-bold mb-10">Servicios en todas las habitaciones</h2>
+
+      <!-- Grid de servicios -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div *ngFor="let s of servicios"
+          class="flex flex-col items-center bg-emerald-400 text-white p-4 rounded-lg shadow hover:scale-105 transition-transform">
+          <fa-icon [icon]="s.icono" ></fa-icon>
+          <p class="text-center font-medium">{{ s.nombre }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
