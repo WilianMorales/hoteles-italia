@@ -3,9 +3,9 @@
 
     <!-- Links principales -->
     <div class="flex flex-wrap justify-center gap-6 text-sm uppercase tracking-wide">
-      <a routerLink="/habitaciones" class="hover:text-white transition">Habitaciones</a>
-      <a routerLink="/servicios" class="hover:text-white transition">Servicios</a>
-      <a routerLink="/contacto" class="hover:text-white transition">Contacto</a>
+      <a *ngFor="let link of links" [routerLink]="link.path" class="transition-colors text-lg hover:text-white" >
+        {{ translate.t(link.key) }}
+      </a>
     </div>
 
     <!-- Redes sociales -->
@@ -37,7 +37,7 @@
           <fa-icon [icon]="iconPhone"></fa-icon>
           <span class="hidden sm:inline">(074) 205 717</span>
           <a href="tel:+5174205717" class="sm:hidden bg-green-500 px-3 py-1 rounded-lg text-white text-xs">
-            Llamar
+            {{translate.t('footer.button') }}
           </a>
         </div>
       </div>
@@ -52,7 +52,7 @@
           <fa-icon [icon]="iconPhone"></fa-icon>
           <span class="hidden sm:inline">(074) 204 417</span>
           <a href="tel:+5174204417" class="sm:hidden bg-green-500 px-3 py-1 rounded-lg text-white text-xs">
-            Llamar
+            {{translate.t('footer.button') }}
           </a>
         </div>
       </div>
@@ -60,10 +60,10 @@
 
     <!-- Derechos -->
     <div class="text-center text-xs text-gray-500 border-t border-white/10 pt-6">
-      © {{currentYear}} Hoteles Italia — Todos los derechos reservados
+      © {{currentYear}} Hoteles Italia —{{translate.t('footer.derechos') }}
       <a href="https://mauriciovereau.dev" target="_blank" rel="noopener noreferrer"
         class="text-gray-500 hover:text-white transition">
-        Desarrollado por Mauricio Vereau
+        {{ translate.t('desarollado') | titlecase }} Mauricio Vereau
       </a>
     </div>
 

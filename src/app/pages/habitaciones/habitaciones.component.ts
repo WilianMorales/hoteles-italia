@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { faBroom, faCloudShowersHeavy, faFan, faHeadset, faShower, faTv, faUserShield, faWater, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { faBroom, faChevronLeft, faChevronRight, faCloudShowersHeavy, faDroplet, faFan, faHeadset, faShower, faTv, faUserShield, faWater, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '../../services/translate.service';
 
 @Component({
   selector: 'app-habitaciones',
@@ -8,15 +9,12 @@ import { faBroom, faCloudShowersHeavy, faFan, faHeadset, faShower, faTv, faUserS
 })
 export class HabitacionesComponent {
 
-  iconWifi = faWifi;
-  iconTV = faTv;
-  iconEscoba = faBroom;
-  iconShower = faShower;
-  iconAgua = faWater;
-  iconVentilador = faFan;
-  iconAtencion = faHeadset;
-  iconSeguridad = faUserShield;
+  showModal = false;
+  tarifaSeleccionada: any = null;
+  currentImg = 0;
 
+  iconLeft = faChevronLeft;
+  iconRight = faChevronRight;
 
   imagenes = [
     'assets/img/habitaciones/_MG_1513.jpg',
@@ -27,38 +25,74 @@ export class HabitacionesComponent {
 
   tarifas = [
     {
-      nombre: 'Simple',
+      nombre: 'tarifas.simple.nombre',
       precio: 120,
-      descripcion: 'Ideal para viajeros individuales.',
-      beneficios: ['Tv', 'Cama individual 1.5', 'Habitacioón confortable', '+ Todos los servicios incluidos']
+      descripcion: 'tarifas.simple.descripcion',
+      beneficios: [
+        'tarifas.simple.beneficios.0',
+        'tarifas.simple.beneficios.1',
+        'tarifas.simple.beneficios.2'
+      ],
+      imagenes: [
+        'assets/img/habitaciones/habitacion-simple1.jpg',
+        'assets/img/habitaciones/habitacion-simple2.jpg',
+        'assets/img/habitaciones/habitacion-simple3.jpg',
+        'assets/img/habitaciones/habitacion-simple4.jpg',
+        'assets/img/habitaciones/habitacion-simple5.jpg',
+      ]
     },
     {
-      nombre: 'Doble',
+      nombre: 'tarifas.doble.nombre',
       precio: 180,
-      descripcion: 'Perfecta para dos personas.',
-      beneficios: ['Tv', '2 Camas individuales 1.5', 'Habitación confortable', '+ Todos los servicios incluidos']
+      descripcion: 'tarifas.doble.descripcion',
+      beneficios: [
+        'tarifas.doble.beneficios.0',
+        'tarifas.doble.beneficios.1',
+        'tarifas.doble.beneficios.2'
+      ],
+      imagenes: [
+        'assets/img/habitaciones/habitacion-doble1.jpg',
+        'assets/img/habitaciones/habitacion-doble2.jpg',
+        'assets/img/habitaciones/habitacion-doble3.jpg',
+        'assets/img/habitaciones/habitacion-doble4.jpg',
+        'assets/img/habitaciones/habitacion-doble5.jpg',
+      ]
     },
     {
-      nombre: 'Ejecutiva',
+      nombre: 'tarifas.ejecutiva.nombre',
       precio: 300,
-      descripcion: 'Lujo y confort para tu estadía.',
-      beneficios: ['Tv LED 32"', 'Cama 2 plazas', 'Habitación confortable']
+      descripcion: 'tarifas.ejecutiva.descripcion',
+      beneficios: [
+        'tarifas.ejecutiva.beneficios.0',
+        'tarifas.ejecutiva.beneficios.1',
+        'tarifas.ejecutiva.beneficios.2'
+      ],
+      imagenes: [
+        'assets/img/habitaciones/habitacion-ejecutiva1.jpg',
+        'assets/img/habitaciones/habitacion-ejecutiva2.jpg',
+        'assets/img/habitaciones/habitacion-ejecutiva3.jpg',
+        'assets/img/habitaciones/habitacion-ejecutiva4.jpg',
+        'assets/img/habitaciones/habitacion-ejecutiva5.jpg',
+      ]
     }
   ];
 
+
   servicios = [
-    { nombre: 'Wi-Fi gratis en todo el hotel', icono: faWifi },
-    { nombre: 'TV por cable', icono: faTv },
-    { nombre: 'Limpieza permanente', icono: faBroom },
-    { nombre: 'Baño privado por habitación', icono: faShower },
-    { nombre: 'Agua fría y caliente 24h', icono: faWater },
-    { nombre: 'Ventilador por habitación', icono: faFan },
-    { nombre: 'Atención las 24 horas', icono: faHeadset },
-    { nombre: 'Seguridad y tranquilidad', icono: faUserShield }
+    { nombre: 'serviceRoom.service1', icono: faWifi },
+    { nombre: 'serviceRoom.service2', icono: faTv },
+    { nombre: 'serviceRoom.service3', icono: faBroom },
+    { nombre: 'serviceRoom.service4', icono: faShower },
+    { nombre: 'serviceRoom.service5', icono: faDroplet },
+    { nombre: 'serviceRoom.service6', icono: faFan },
+    { nombre: 'serviceRoom.service7', icono: faHeadset },
+    { nombre: 'serviceRoom.service8', icono: faUserShield }
   ];
 
 
   currentIndex = 0;
+
+  constructor(public translate: TranslateService) { }
 
   ngOnInit() {
     setInterval(() => {
@@ -66,17 +100,26 @@ export class HabitacionesComponent {
     }, 3000);
   }
 
-  prev() {
-    this.currentIndex = (this.currentIndex === 0) ? this.imagenes.length - 1 : this.currentIndex - 1;
-  }
-
-  next() {
-    this.currentIndex = (this.currentIndex === this.imagenes.length - 1) ? 0 : this.currentIndex + 1;
-  }
-
   scrollToPricing() {
     document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
   }
 
+  mostrarModalTarifa(tarifa: any) {
+    this.tarifaSeleccionada = tarifa;
+    this.showModal = true;
+    this.currentImg = 0;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
+  nextImg() {
+    this.currentImg = (this.currentImg + 1) % this.tarifaSeleccionada.imagenes.length;
+  }
+
+  prevImg() {
+    this.currentImg = (this.currentImg - 1 + this.tarifaSeleccionada.imagenes.length) % this.tarifaSeleccionada.imagenes.length;
+  }
 
 }

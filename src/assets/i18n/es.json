@@ -13,7 +13,10 @@
     "title": "Bienvenido a Hotel Italia",
     "description": "Confort en el corazón de Chiclayo",
     "button": "Llamar",
-    "title2": "Tu Lugar en Chiclayo",
+    "title2": "parte de la Ruta del Papa León XIV",
+    "chiclayo": "conocida como la “Capital de la Amistad”, fue hogar pastoral del Papa León XIV. Un lugar donde la historia, la fe y la cultura se encuentran, ideal para tu próxima visita.",
+    "button-info": "Más información",
+    "title3": "Tu Lugar en Chiclayo",
     "subtitle_section": "Descubre por qué Hotel Italia es la elección preferida en Chiclayo",
     "description_section": "En Hotel Italia combinamos ubicación estratégica, comodidad y un servicio excepcional para que disfrutes de una experiencia única, ya sea por negocios o placer.",
     "service1": "Ubicación céntrica",
@@ -28,5 +31,54 @@
     "description5": "Nos comprometemos a ofrecerte un servicio puntual y de calidad en cada detalle de tu estancia.",
     "service6": "Comodidad y Limpieza",
     "description6": "Habitaciones limpias, cómodas y equipadas para que te sientas como en casa."
+  },
+  "tarifas": {
+    "title": "Nuestras Tarifas",
+    "description": "Elige la habitación que mejor se adapte a tus necesidades y disfruta de una estancia confortable en Hotel Italia.",
+    "button": "Ver Habitaciones",
+    "simple": {
+      "nombre": "Simple",
+      "descripcion": "Ideal para viajeros individuales.",
+      "beneficios": [
+        "Tv",
+        "Cama individual 1.5",
+        "Habitación confortable"
+      ]
+    },
+    "doble": {
+      "nombre": "Doble",
+      "descripcion": "Perfecta para dos personas.",
+      "beneficios": [
+        "Tv",
+        "2 Camas individuales 1.5",
+        "Habitación confortable"
+      ]
+    },
+    "ejecutiva": {
+      "nombre": "Ejecutiva",
+      "descripcion": "Lujo y confort para tu estadía.",
+      "beneficios": [
+        "Tv LED 32\"",
+        "Cama 2 plazas",
+        "Habitación confortable"
+      ]
+    }
+  },
+  "serviceRoom":{
+    "title": "Servicios en todas las habitaciones",
+    "description": "Disfruta de una estancia cómoda y agradable con nuestros servicios incluidos en todas las habitaciones.",
+    "service1": "Wi-Fi gratis en todo el hotel",
+    "service2": "TV por cable",
+    "service3": "Limpieza permanente",
+    "service4": "Baño privado por habitación",
+    "service5": "Agua fría y caliente 24h",
+    "service6": "Ventilador por habitación",
+    "service7": "Atención las 24 horas",
+    "service8": "Seguridad y tranquilidad"
+  },
+  "footer":{
+    "button": "Llamar",
+    "derechos": "Todos los derechos reservados",
+    "desarrollado": "Desarrollado por"
   }
 }

@@ -13,7 +13,10 @@
     "title": "Welcome to Hotel Italia",
     "description": "Comfort in the heart of Chiclayo",
     "button": "Call",
-    "title2": "Your Place in Chiclayo",
+    "title2": "part of the Route of Pope Leo XIV",
+    "chiclayo": "known as the 'Capital of Friendship', was the pastoral home of Pope Leo XIV. A place where history, faith, and culture meet, ideal for your next visit.",
+    "button-info": "More Information",
+    "title3": "Your Place in Chiclayo",
     "subtitle_section": "Discover why Hotel Italia is the preferred choice in Chiclayo",
     "description_section": "At Hotel Italia, we combine strategic location, comfort, and exceptional service to ensure you have a unique experience, whether for business or pleasure.",
     "service1": "Central Location",
@@ -28,5 +31,54 @@
     "description5": "We are committed to providing you with timely and quality service in every detail of your stay.",
     "service6": "Comfort and Cleanliness",
     "description6": "Clean, comfortable rooms equipped to make you feel at home."
+  },
+  "tarifas": {
+    "title": "Our Rates",
+    "description": "Choose the room that best suits your needs and enjoy a comfortable stay at Hotel Italia.",
+    "button": "View Rooms",
+    "simple": {
+      "nombre": "Simple",
+      "descripcion": "Ideal for individual travelers.",
+      "beneficios": [
+        "TV",
+        "Single bed 1.5",
+        "Comfortable room"
+      ]
+    },
+    "doble": {
+      "nombre": "Double",
+      "descripcion": "Perfect for two people.",
+      "beneficios": [
+        "TV",
+        "2 Single beds 1.5",
+        "Comfortable room"
+      ]
+    },
+    "ejecutiva": {
+      "nombre": "Executive",
+      "descripcion": "Luxury and comfort for your stay.",
+      "beneficios": [
+        "32\" LED TV",
+        "Double bed",
+        "Comfortable room"
+      ]
+    }
+  },
+  "serviceRoom": {
+    "title": "Services in all rooms",
+    "description": "Enjoy a comfortable and pleasant stay with our services included in all rooms.",
+    "service1": "Free Wi-Fi throughout the hotel",
+    "service2": "Cable TV",
+    "service3": "Daily cleaning service",
+    "service4": "Private bathroom in each room",
+    "service5": "Hot and cold water 24/7",
+    "service6": "Fan in each room",
+    "service7": "24-hour front desk service",
+    "service8": "Safety and tranquility"
+  },
+  "footer": {
+    "button": "Call",
+    "derechos": "All rights reserved",
+    "desarrollado": "Developed by"
   }
 }

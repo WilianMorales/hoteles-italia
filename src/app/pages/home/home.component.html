@@ -85,75 +85,37 @@
   </div>
 </section>
 
-<section id="features-section">
-  <div class="bg-gray-200 py-20 lg:py-26 min-h-screen">
+<section id="features-section" class="bg-gray-200 py-20 lg:py-26">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
 
-    <!-- Contenido centrado -->
-    <div class="max-w-4xl mx-auto text-center px-4">
+    <!-- Contenido -->
+    <div class="flex-1 text-center">
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-        Chiclayo: parte de la Ruta del Papa León XIV
+        Chiclayo: {{translate.t('home.title2')}}
       </h2>
-      <p class="text-gray-600 mb-8">
-        Chiclayo, conocida como la “Capital de la Amistad”, fue hogar pastoral del Papa León XIV.
-        Un lugar donde la historia, la fe y la cultura se encuentran, ideal para tu próxima visita.
+      <p class="text-gray-600 mb-8 leading-relaxed">
+        Chiclayo, {{translate.t('home.chiclayo')}}
       </p>
+      <a href="" class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-indigo-200
+                  font-medium rounded-lg px-5 py-2.5 text-center transition-colors">{{translate.t('home.button-info')}}</a>
     </div>
 
-    <!-- Lugares en Chiclayo -->
-    <div class="bg-gray-200 pb-4">
-      <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8 px-4">
-
-        <!-- Catedral -->
-        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="assets/img/inicio/ruta-papa/catedral-chiclayo.jpeg" alt="Catedral de Chiclayo"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Catedral de Chiclayo</h3>
-            <p class="text-gray-600">Centro histórico y cultural, ideal para pasear y disfrutar de la arquitectura.</p>
-          </div>
-        </div>
-
-        <!-- Palacio Municipal -->
-        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="assets/img/inicio/ruta-papa/iglesia-san-pedro.jpg" alt="Iglesia San Pedro de Monsefú"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Iglesia San Pedro de Monsefú</h3>
-            <p class="text-gray-600">Descubre la rica herencia cultural de Chiclayo a través de sus impresionantes
-              exposiciones.</p>
-          </div>
-        </div>
-
-        <!-- Santurario Virgen de la Paz -->
-        <div class="flex-1 max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
-          <img src="assets/img/inicio/ruta-papa/santuario-de-la-paz.png" alt="Mercado Modelo de Chiclayo"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Santuario Virgen de la Paz</h3>
-            <p class="text-gray-600">Un lugar vibrante para experimentar la vida local y probar la deliciosa
-              gastronomía.</p>
-          </div>
-        </div>
-
+    <!-- Imagen -->
+    <div class="flex-1 flex justify-center">
+      <div class="w-85 h-50 sm:h-72 overflow-hidden rounded-xl shadow-lg">
+        <img src="assets/img/inicio/ruta-papa/ruta-papa.webp" alt="Ruta del Papa León XIV"
+          class="w-full h-full object-cover">
       </div>
-    </div>
-
-
-    <!-- Imagen a todo el ancho -->
-    <div class="w-full">
-      <img src="assets/img/inicio/ruta-papa/ruta-papa.webp" alt="Ruta del Papa León XIV"
-        class="w-full sm:h-96 object-cover">
     </div>
 
   </div>
 </section>
 
-
 <section>
-  <div class="bg-white py-24 sm:py-32">
+  <div class="bg-white py-24 ">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base/7 font-semibold text-gray-600">{{translate.t('home.title2')}}</h2>
+        <h2 class="text-base/7 font-semibold text-gray-600">{{translate.t('home.title3')}}</h2>
         <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
           {{translate.t('home.subtitle_section')}}
         </p>

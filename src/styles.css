@@ -30,6 +30,15 @@ html {
 .font-humanist, h1, p, a, h2, h3{
   font-family: 'Humanist521BT', sans-serif;
 }
+
+/* Bajar prioridad del mapa */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 1 !important;
+}
+
+
 /*
  {
   font-family: 'Work Sans', sans-serif;

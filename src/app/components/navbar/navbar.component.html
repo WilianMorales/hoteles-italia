@@ -1,25 +1,26 @@
-<nav
-  class="fixed left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300 ease-in-out mt-2 mx-2 xl:mx-36 rounded-2xl"
-  [ngClass]="{
-    'bg-white shadow-lg': scrolled,
-    'bg-transparent': !scrolled
-  }"
->
-
+<nav class="fixed left-0 right-0 z-50 transition-[background-color,box-shadow] duration-300 ease-in-out mt-2 mx-2 xl:mx-36 rounded-2xl"
+  [ngClass]="{ 'bg-white shadow-lg': scrolled, 'bg-transparent': !scrolled }">
 
   <div class="container mx-auto flex justify-between items-center py-2 px-2">
 
     <!--Bloque imagen logo-->
     <a routerLink="/" class="flex items-center">
-      <img [src]="scrolled ? 'assets/img/Recurso3.svg' : 'assets/img/Recurso3-blanco.svg'"
-        alt="Hotel Italia" class="h-10 w-auto transition-all duration-300">
+      <img [src]="scrolled ? 'assets/img/Recurso3.svg' : 'assets/img/Recurso3-blanco.svg'" alt="Hotel Italia"
+        class="h-10 w-auto transition-all duration-300">
     </a>
 
     <!--Bloque centro: enlaces-->
     <div class="hidden xl:flex flex-1 justify-center space-x-8">
-      <a *ngFor="let link of links" [routerLink]="link.path"
+      <!-- <a *ngFor="let link of links" [routerLink]="link.path"
         [ngClass]="{'text-gray-700': scrolled, 'text-white':!scrolled}" class="transition-colors text-lg">{{
-        translate.t(link.key) }}</a>
+        translate.t(link.key) }}</a> -->
+      <a *ngFor="let link of links" [routerLink]="link.path" class="transition-colors text-lg" [ngClass]="{
+     'text-gray-700 hover:text-green-600': scrolled,
+     'text-white hover:text-white/70': !scrolled
+      }">
+        {{ translate.t(link.key) }}
+      </a>
+
     </div>
 
     <div class="flex items-center gap-4">

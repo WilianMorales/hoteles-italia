@@ -1,44 +1,133 @@
-<section id="habitaciones" class="min-h-screen">
-  <!-- Carrusel básico -->
+<section class="min-h-screen">
+  <!-- Carrusel -->
   <div class="relative w-full h-[300px] sm:h-[500px] overflow-hidden">
     <div *ngFor="let img of imagenes; let i = index" class="absolute inset-0 transition-opacity duration-1000"
       [class.opacity-100]="i === currentIndex" [class.opacity-0]="i !== currentIndex">
       <img [src]="img" class="w-full h-full object-cover">
+      <!-- Overlay degradado -->
+      <div class="absolute inset-0 bg-black/30"></div>
     </div>
   </div>
 
-  <!-- Precios -->
-  <section id="pricing-section" class="py-16 bg-gray-50">
-    <h2 class="text-center text-3xl font-bold mb-10">Nuestras Tarifas</h2>
-    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-      <div *ngFor="let plan of tarifas" class="bg-white shadow-lg rounded-xl p-6 text-center">
-        <h3 class="text-xl font-semibold">{{ plan.nombre }}</h3>
-        <p class="text-4xl font-bold my-4">S/ {{ plan.precio }}</p>
-        <ul class="text-gray-600 mb-6">
-          <li *ngFor="let item of plan.beneficios" class="mb-2">✔ {{ item }}</li>
-        </ul>
-        <a href="#contacto" class="bg-primary text-white py-2 px-4 rounded-lg hover:bg-primary-dark transition">
-          Reservar
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Servicios -->
-  <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-2">
-      <!-- Título -->
-      <h2 class="text-center text-3xl font-bold mb-10">Servicios en todas las habitaciones</h2>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-center text-3xl font-bold mb-10 text-gray-800">
+      {{ translate.t('serviceRoom.title') }}
+    </h2>
 
-      <!-- Grid de servicios -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <div *ngFor="let s of servicios"
-          class="flex flex-col items-center bg-emerald-400 text-white p-4 rounded-lg shadow hover:scale-105 transition-transform">
-          <fa-icon [icon]="s.icono" ></fa-icon>
-          <p class="text-center font-medium">{{ s.nombre }}</p>
-        </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <div *ngFor="let s of servicios"
+        class="flex flex-col items-center bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <fa-icon [icon]="s.icono" class="text-4xl text-emerald-500 mb-3"></fa-icon>
+        <p class="text-center font-medium">{{ translate.t(s.nombre) }}</p>
       </div>
     </div>
-  </section>
-
+  </div>
 </section>
+
+
+
+<section id="pricing-section" class="bg-gray-200">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+
+    <!-- Título y descripción -->
+    <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+        {{ translate.t('tarifas.title') }}
+      </h2>
+      <p class="mb-5 font-light text-gray-500 sm:text-xl">
+        {{ translate.t('tarifas.description') }}
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+      <div *ngFor="let t of tarifas"
+        class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow-xl xl:p-8 hover:shadow-2xl transition-shadow duration-300">
+
+        <!-- Nombre -->
+        <h3 class="mb-4 text-2xl font-semibold">{{ translate.t(t.nombre) }}</h3>
+
+        <!-- Descripción -->
+        <p class="font-light text-gray-500 sm:text-lg">{{ translate.t(t.descripcion) }}</p>
+
+        <!-- Precio -->
+        <div class="flex justify-center items-baseline my-8">
+          <span class="mr-2 text-5xl font-extrabold">S/ {{ t.precio }}</span>
+          <span class="text-gray-500">/noche</span>
+        </div>
+
+        <!-- Lista de beneficios -->
+        <ul role="list" class="mb-8 space-y-4 text-left">
+          <li *ngFor="let b of t.beneficios" class="flex items-center space-x-3">
+            <!-- Icono check -->
+            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0
+                       011.414-1.414L8 12.586l7.293-7.293a1 1 0
+                       011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>{{ translate.t(b) }}</span>
+          </li>
+        </ul>
+
+        <!-- Botón -->
+        <button (click)="mostrarModalTarifa(t)" class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-indigo-200
+         font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors">
+          {{ translate.t('tarifas.button') }}
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div *ngIf="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+
+  <!-- Backdrop con blur -->
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+    [class.opacity-100]="showModal" (click)="closeModal()">
+  </div>
+
+  <!-- Contenedor modal con slide + fade -->
+  <div
+    class="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden transform transition-all duration-500 translate-y-10 opacity-0"
+    [class.opacity-100]="showModal" [class.translate-y-0]="showModal">
+
+    <!-- Botón cerrar flotante -->
+    <button (click)="closeModal()"
+      class="absolute top-4 right-4 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 shadow-md transition z-50">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Carrusel -->
+    <div class="relative h-64 sm:h-96 overflow-hidden">
+      <img [src]="tarifaSeleccionada.imagenes[currentImg]"
+        class="w-full h-full object-cover transition-all duration-300">
+      <!-- Botón anterior -->
+      <button (click)="prevImg()"
+        class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full p-3 transition transform">
+        <fa-icon [icon]="iconLeft" class="text-white text-lg"></fa-icon>
+      </button>
+
+      <!-- Botón siguiente -->
+      <button (click)="nextImg()"
+        class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-3 transition transform">
+        <fa-icon [icon]="iconRight" class="text-white text-lg"></fa-icon>
+      </button>
+
+    </div>
+
+    <!-- Información -->
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-2">{{ translate.t(tarifaSeleccionada.nombre) }}</h2>
+      <p class="text-gray-600 mb-4">{{ translate.t(tarifaSeleccionada.descripcion) }}</p>
+    </div>
+
+  </div>
+</div>
