@@ -11,6 +11,8 @@ export class NavbarComponent {
   scrolled = false;
   menuOpen = false;
 
+  showModal = false;
+
   currentLang: 'es' | 'en' = 'es';
 
   constructor(public translate: TranslateService) {
@@ -43,6 +45,20 @@ export class NavbarComponent {
 
   closeMenu() {
     this.menuOpen = false;
+  }
+
+
+    scrollToPricing() {
+    document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  mostrarModal() {
+    this.showModal = true;
+
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 
 }
