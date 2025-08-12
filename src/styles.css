@@ -39,7 +39,13 @@ html {
 }
 
 
-/*
- {
-  font-family: 'Work Sans', sans-serif;
-} */
+/* Ocultar icono nativo del date picker en Chrome, Safari, Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+/* En Firefox */
+input[type="date"] {
+  -moz-appearance: textfield;
+}

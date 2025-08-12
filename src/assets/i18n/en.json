@@ -4,9 +4,10 @@
     "habitaciones": "Rooms",
     "turismo": "Tourism",
     "contacto": "Contact",
+    "redes": "Social Media",
     "reservar": "Book Now"
   },
-  "FormReserva": {
+  "formReserva": {
     "title": "Book Your Room",
     "subtitle": "Fill out the form and we will get in touch with you.",
     "hotel": "Which hotel would you like to book?",

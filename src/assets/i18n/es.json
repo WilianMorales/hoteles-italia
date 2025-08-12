@@ -2,11 +2,12 @@
   "navbar": {
     "inicio": "Inicio",
     "habitaciones": "Habitaciones",
-    "contacto": "Contacto",
     "turismo": "Turismo",
+    "contacto": "Contacto",
+    "redes": "Redes Sociales",
     "reservar": "Reservar"
   },
-  "FormReserva":{
+  "formReserva":{
     "title": "Reserva tu habitación",
     "subtitle": "Llena el formulario y nos pondremos en contacto contigo.",
     "hotel": "¿En qué hotel deseas reservar?",
