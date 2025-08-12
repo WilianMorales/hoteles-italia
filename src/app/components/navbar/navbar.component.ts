@@ -23,9 +23,7 @@ export class NavbarComponent {
   links = [
     { key: 'navbar.inicio', path: '/' },
     { key: 'navbar.habitaciones', path: '/habitaciones' },
-    // { key: 'navbar.tarifas', path: '/tarifas' },
-    // { key: 'navbar.servicios', path: '/servicios' },
-    // { key: 'navbar.ubicanos', path: '/ubicanos' },
+    { key: 'navbar.turismo', path: '/turismo' },
     { key: 'navbar.contacto', path: '/contacto' }
   ];
 

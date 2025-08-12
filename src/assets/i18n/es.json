@@ -2,11 +2,25 @@
   "navbar": {
     "inicio": "Inicio",
     "habitaciones": "Habitaciones",
-    "tarifas": "Tarifas",
-    "servicios": "Servicios",
-    "ubicanos": "Ubícanos",
     "contacto": "Contacto",
+    "turismo": "Turismo",
     "reservar": "Reservar"
+  },
+  "FormReserva":{
+    "title": "Reserva tu habitación",
+    "subtitle": "Llena el formulario y nos pondremos en contacto contigo.",
+    "hotel": "¿En qué hotel deseas reservar?",
+    "selectType": "Selecciona el tipo de habitación",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "checkin": "Fecha de Entrada",
+    "checkout": "Fecha de Salida",
+    "roomType": "Tipo de Habitación",
+    "message": "Mensaje (opcional)",
+    "submit": "Enviar Reserva",
+    "success": "¡Tu solicitud de reserva ha sido enviada con éxito!",
+    "error": "Hubo un error al enviar tu reserva. Por favor, inténtalo de nuevo."
   },
   "home": {
     "welcome": "Bienvenido a",

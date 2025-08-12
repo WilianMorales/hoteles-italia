@@ -2,11 +2,25 @@
   "navbar": {
     "inicio": "Home",
     "habitaciones": "Rooms",
-    "tarifas": "Rates",
-    "servicios": "Services",
-    "ubicanos": "Find Us",
+    "turismo": "Tourism",
     "contacto": "Contact",
     "reservar": "Book Now"
+  },
+  "FormReserva": {
+    "title": "Book Your Room",
+    "subtitle": "Fill out the form and we will get in touch with you.",
+    "hotel": "Which hotel would you like to book?",
+    "selectType": "Select Room Type",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "checkin": "Check-in Date",
+    "checkout": "Check-out Date",
+    "roomType": "Room Type",
+    "message": "Message (optional)",
+    "submit": "Submit Booking",
+    "success": "Your booking request has been successfully sent!",
+    "error": "There was an error sending your booking. Please try again."
   },
   "home": {
     "welcome": "Welcome to",
