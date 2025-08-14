@@ -47,6 +47,9 @@
     "service6": "Comodidad y Limpieza",
     "description6": "Habitaciones limpias, cómodas y equipadas para que te sientas como en casa."
   },
+  "comentarios":{
+    "title": "Comentarios"
+  },
   "tarifas": {
     "title": "Nuestras Tarifas",
     "description": "Elige la habitación que mejor se adapte a tus necesidades y disfruta de una estancia confortable en Hotel Italia.",

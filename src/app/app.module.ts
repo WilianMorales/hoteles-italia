@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from "./components/components.module";
@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HabitacionesComponent } from './pages/habitaciones/habitaciones.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { TurismoComponent } from './pages/turismo/turismo.component';
+import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
+import { FormReservaComponent } from './shared/form-reserva/form-reserva.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TurismoComponent } from './pages/turismo/turismo.component';
     HomeComponent,
     HabitacionesComponent,
     ContactoComponent,
-    TurismoComponent,
+    RedesSocialesComponent,
+    FormReservaComponent,
+    TurismoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { TurismoComponent } from './pages/turismo/turismo.component';
     FontAwesomeModule
 ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

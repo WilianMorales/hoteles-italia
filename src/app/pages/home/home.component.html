@@ -4,10 +4,15 @@
     class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
     [ngStyle]="{'background-image': 'url(' + img.src + ')'}" [class.opacity-100]="i === currentImageIndex"
     [class.opacity-0]="i !== currentImageIndex">
+
+    <!-- Capa tipo "espejo" -->
+    <div class="absolute inset-0 backdrop-blur-sm bg-black/60"></div>
+
   </div>
 
+
   <!-- Capa oscura -->
-  <div class="absolute inset-0 bg-primary/70"></div>
+  <div class="absolute inset-0 bg-gray/70"></div>
 
   <!-- Contenido principal -->
   <div class="relative z-10 text-center text-white max-w-3xl px-4 pb-12 sm:pt-0">
@@ -96,7 +101,8 @@
       <p class="text-gray-600 mb-8 leading-relaxed">
         Chiclayo, {{translate.t('home.chiclayo')}}
       </p>
-      <a href="" class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-indigo-200
+      <a href=""
+        class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-indigo-200
                   font-medium rounded-lg px-5 py-2.5 text-center transition-colors">{{translate.t('home.button-info')}}</a>
     </div>
 

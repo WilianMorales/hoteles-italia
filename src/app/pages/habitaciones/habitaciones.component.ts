@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { faBroom, faChevronLeft, faChevronRight, faCloudShowersHeavy, faDroplet, faFan, faHeadset, faShower, faTv, faUserShield, faWater, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { faBroom, faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '../../services/translate.service';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-habitaciones',
@@ -16,17 +17,22 @@ export class HabitacionesComponent {
   iconLeft = faChevronLeft;
   iconRight = faChevronRight;
 
+  iconStar = faStar;
+  iconStarR = faStar
+  iconEye = faEye;
+
+
   imagenes = [
-    'assets/img/habitaciones/_MG_1513.jpg',
-    'assets/img/habitaciones/_MG_1562.jpg',
-    'assets/img/habitaciones/_MG_1577.jpg',
-    'assets/img/habitaciones/_MG_1659.jpg'
+    'assets/img/habitaciones/_MG_1513.webp',
+    'assets/img/habitaciones/_MG_1562.webp',
+    'assets/img/habitaciones/_MG_1577.webp',
+    'assets/img/habitaciones/_MG_1659.webp'
   ];
 
   tarifas = [
     {
       nombre: 'tarifas.simple.nombre',
-      precio: 120,
+      precio: 40,
       descripcion: 'tarifas.simple.descripcion',
       beneficios: [
         'tarifas.simple.beneficios.0',
@@ -43,7 +49,7 @@ export class HabitacionesComponent {
     },
     {
       nombre: 'tarifas.doble.nombre',
-      precio: 180,
+      precio: 60,
       descripcion: 'tarifas.doble.descripcion',
       beneficios: [
         'tarifas.doble.beneficios.0',
@@ -60,7 +66,7 @@ export class HabitacionesComponent {
     },
     {
       nombre: 'tarifas.ejecutiva.nombre',
-      precio: 300,
+      precio: 70,
       descripcion: 'tarifas.ejecutiva.descripcion',
       beneficios: [
         'tarifas.ejecutiva.beneficios.0',
@@ -78,17 +84,43 @@ export class HabitacionesComponent {
   ];
 
 
-  servicios = [
-    { nombre: 'serviceRoom.service1', icono: faWifi },
-    { nombre: 'serviceRoom.service2', icono: faTv },
-    { nombre: 'serviceRoom.service3', icono: faBroom },
-    { nombre: 'serviceRoom.service4', icono: faShower },
-    { nombre: 'serviceRoom.service5', icono: faDroplet },
-    { nombre: 'serviceRoom.service6', icono: faFan },
-    { nombre: 'serviceRoom.service7', icono: faHeadset },
-    { nombre: 'serviceRoom.service8', icono: faUserShield }
+  reviews = [
+    {
+      nombre: 'Juan Pérez',
+      fecha: 'Hace 2 semanas',
+      estrellas: 5,
+      comentario: 'La habitación estaba impecable, el servicio muy atento y la ubicación perfecta. ¡Recomendado!',
+      foto: 'assets/img/comentarios/usuario-1.jpg'
+    },
+    {
+      nombre: 'María López',
+      fecha: 'Hace 1 mes',
+      estrellas: 4,
+      comentario: 'Muy buena experiencia, aunque el desayuno podría mejorar. El personal fue excelente.',
+      foto: 'assets/img/comentarios/usuario-2.jpg'
+    },
+    {
+      nombre: 'Carlos Fernández',
+      fecha: 'Hace 3 meses',
+      estrellas: 5,
+      comentario: 'Me encantó todo, volveré sin duda alguna. La vista desde la habitación es increíble.',
+      foto: 'assets/img/comentarios/usuario-3.jpg'
+    },
+    {
+      nombre: 'Piero Salvador',
+      fecha: 'Hace 3 meses',
+      estrellas: 5,
+      comentario: 'Me encantó todo, volveré sin duda alguna. La vista desde la habitación es increíble.',
+      foto: 'assets/img/comentarios/usuario-4.jpg'
+    }
+    , {
+      nombre: 'Luis Silva',
+      fecha: 'Hace 3 meses',
+      estrellas: 5,
+      comentario: 'Me encantó todo, volveré sin duda alguna. La vista desde la habitación es increíble.',
+      foto: 'assets/img/comentarios/usuario-5.jpg'
+    }
   ];
-
 
   currentIndex = 0;
 
@@ -97,7 +129,10 @@ export class HabitacionesComponent {
   ngOnInit() {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.imagenes.length;
+
     }, 3000);
+
+
   }
 
   scrollToPricing() {

@@ -20,11 +20,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   iconPhone = faPhone;
 
    images = [
-    { src: 'assets/img/inicio/recepcion-arica1.jpg', alt: 'Imagen 1' },
-    { src: 'assets/img/inicio/recepcion-arica2.jpg', alt: 'Imagen 1' },
-    { src: 'assets/img/inicio/recepcion-7enero1.jpg', alt: 'Imagen 1' },
-    { src: 'assets/img/inicio/recepcion-7enero2.jpg', alt: 'Imagen 1' },
+    { src: 'assets/img/inicio/recepcion-arica1.webp', alt: 'Imagen 1' },
+    { src: 'assets/img/inicio/recepcion-arica2.webp', alt: 'Imagen 2' },
+    { src: 'assets/img/inicio/recepcion-7enero1.webp', alt: 'Imagen 3' },
+    { src: 'assets/img/inicio/recepcion-7enero2.webp', alt: 'Imagen 4' },
   ]
+
+    // servicios = [
+    //   { nombre: 'serviceRoom.service1', icono: faWifi },
+    //   { nombre: 'serviceRoom.service2', icono: faTv },
+    //   { nombre: 'serviceRoom.service3', icono: faBroom },
+    //   { nombre: 'serviceRoom.service4', icono: faShower },
+    //   { nombre: 'serviceRoom.service5', icono: faDroplet },
+    //   { nombre: 'serviceRoom.service6', icono: faFan },
+    //   { nombre: 'serviceRoom.service7', icono: faHeadset },
+    //   { nombre: 'serviceRoom.service8', icono: faUserShield }
+    // ];
 
   currentImageIndex = 0;
   intervalId: any;

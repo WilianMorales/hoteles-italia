@@ -1,5 +1,5 @@
 <div class="flex flex-col min-h-screen">
-  <navbar></navbar>
+  <app-navbar></app-navbar>
 
   <main class="flex-grow flex flex-col">
     <div class="flex-grow">
@@ -9,11 +9,16 @@
 
   <app-footer></app-footer>
 
-  <a href="https://wa.me/51912800899?text=Hola%20quiero%20hacer%20una%20reserva" target="_blank"
-    rel="noopener noreferrer"
-    class="fixed bottom-4 right-4 w-14 h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-[0_0_10px_rgba(255,244,214,0.8)] hover:scale-110 transition-transform duration-300 z-40">
-    <fa-icon [icon]="iconWsp" class="text-3xl"></fa-icon>
+  <a (click)="openModalForm()" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 w-14 h-14 flex items-center justify-center
+         text-white bg-gradient-to-r from-green-500 to-emerald-600
+         hover:from-green-600 hover:to-emerald-700
+         rounded-full shadow-lg hover:shadow-xl
+         hover:scale-110 transition-all duration-300 z-40 animate-pulse-ring">
+    <fa-icon [icon]="iconBell" class="text-2xl"></fa-icon>
   </a>
 
 
+  <!-- 🔹 Modal global -->
+  <app-form-reserva></app-form-reserva>
+  <app-redes-sociales></app-redes-sociales>
 </div>

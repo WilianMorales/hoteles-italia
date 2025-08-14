@@ -1,0 +1,17 @@
+<div *ngIf="isOpen" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-xl relative w-80">
+    <!-- Botón cerrar -->
+    <button (click)="close()" class="absolute top-2 right-2 text-gray-700">
+      ✕
+    </button>
+
+    <!-- Contenido del modal -->
+    <h2 class="text-lg font-bold mb-4">Redes Sociales</h2>
+    <p>Sigue a nuestro hotel en redes sociales:</p>
+    <ul class="mt-2 space-y-2">
+      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+    </ul>
+  </div>
+</div>

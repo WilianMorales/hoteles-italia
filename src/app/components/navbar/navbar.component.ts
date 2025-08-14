@@ -1,86 +1,80 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
-import { faConciergeBell, faMailBulk, faPhone, faUsers, faUserTie } from '@fortawesome/free-solid-svg-icons';
-import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
+import { ModalService } from '../../services/modal.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
+type NavLink = { key: string; path?: string; action?: () => void };
 
 @Component({
-  selector: 'navbar',
+  selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
-
-  iconCal = faCalendarAlt;
-  iconBell = faConciergeBell;
-
+export class NavbarComponent implements OnInit {
   currentLang: 'es' | 'en' = 'es';
-
   scrolled = false;
   menuOpen = false;
+  activeLink = '';
 
-  showModal = false;
-
-  checkInDate: string | null = null;
-  checkOutDate: string | null = null;
-
-  personalFields = [
-    { label: 'Nombre', type: 'text', placeholder: 'Ingresa tu nombre', icon: faUserTie },
-    { label: 'Cantidad de personas', type: 'number', placeholder: 'Ej: 2', icon: faUsers },
-    { label: 'Email', type: 'email', placeholder: 'correo@ejemplo.com', icon: faMailBulk },
-    { label: 'Teléfono', type: 'tel', placeholder: '+51 999 999 999', icon: faPhone }
-  ];
-
-  links = [
+  readonly links: NavLink[] = [
     { key: 'navbar.inicio', path: '/' },
     { key: 'navbar.habitaciones', path: '/habitaciones' },
     { key: 'navbar.turismo', path: '/turismo' },
     { key: 'navbar.contacto', path: '/contacto' },
-    { key: 'navbar.redes', path: '' }
+    { key: 'navbar.redes', action: () => this.modalService.openRedesModal() },
   ];
 
-
-  sedes = [
-    { id: '1', value: '7 de Enero' },
-    { id: '2', value: 'Arica' },
-  ]
-
-  tarifas = [
-    { id: '1', value: 'tarifas.simple.nombre', precio: 40 },
-    { id: '2', value: 'tarifas.doble.nombre', precio: 60 },
-    { id: '3', value: 'tarifas.ejecutiva.nombre', precio: 70 },
-  ]
-
-  constructor(public translate: TranslateService) {
+  constructor(
+    public translate: TranslateService,
+    private modalService: ModalService,
+    private router: Router
+  ) {
     const savedLang = localStorage.getItem('lang') as 'es' | 'en';
     this.currentLang = savedLang || 'es';
+  }
+
+  ngOnInit() {
+    // Detectar la ruta inicial y en cada navegación
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        const currentPath = event.urlAfterRedirects;
+        const found = this.links.find(link => link.path === currentPath);
+        if (found) {
+          this.activeLink = found.key;
+        } else {
+          this.activeLink = ''; // por si es una ruta sin coincidencia
+        }
+      });
+
+    // Ejecutar una vez al iniciar para la ruta actual
+    const currentPath = this.router.url;
+    const found = this.links.find(link => link.path === currentPath);
+    if (found) {
+      this.activeLink = found.key;
+    }
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.scrolled = window.scrollY > 50;
   }
 
   changeLang(lang: 'es' | 'en') {
     this.currentLang = lang;
     this.translate.setLang(lang);
+    localStorage.setItem('lang', lang);
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.scrolled = window.scrollY > 50;
+
+  handleLinkClick(link: NavLink) {
+    this.activeLink = link.key;
+
+    if (link.action) {
+      link.action();
+    } else if (link.path) {
+      this.router.navigate([link.path]);
+    }
   }
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  closeMenu() {
-    this.menuOpen = false;
-  }
-
-  mostrarModal() {
-    this.showModal = true;
-
-  }
-
-  closeModal() {
-    this.showModal = false;
-  }
-
 }

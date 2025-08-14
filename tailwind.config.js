@@ -5,13 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#2A2A2A',   // Negro / Gris oscuro - texto principal y fondo
-        accentRed: '#E53935', // Rojo bandera
-        accentGreen: '#1B5E20', // Verde bandera
-        lightGray: '#E0E0E0', // Gris claro - fondos
-        wood: '#B5651D',      // Madera cálida
-      }
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite',
+      },
     },
   },
   plugins: [],

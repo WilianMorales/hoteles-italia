@@ -47,6 +47,9 @@
     "service6": "Comfort and Cleanliness",
     "description6": "Clean, comfortable rooms equipped to make you feel at home."
   },
+  "comentarios":{
+    "title": "Reviews"
+  },
   "tarifas": {
     "title": "Our Rates",
     "description": "Choose the room that best suits your needs and enjoy a comfortable stay at Hotel Italia.",
