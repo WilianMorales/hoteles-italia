@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faHotel, faLocationDot, faPhone, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   title = 'Hotel Italia';
 
-  iconCampana = faBell ;
   iconStart = faStar;
 
-  iconHotel = faHotel;
+  iconWsp = faWhatsapp;
+
   iconLocation = faLocationDot;
-  iconPhone = faPhone;
 
    images = [
     { src: 'assets/img/inicio/recepcion-arica1.webp', alt: 'Imagen 1' },

@@ -3,7 +3,7 @@
 
     <!-- Links principales -->
     <div class="flex flex-wrap justify-center gap-6 text-sm uppercase tracking-wide">
-      <a *ngFor="let link of links" [routerLink]="link.path" class="transition-colors text-lg hover:text-white" >
+      <a *ngFor="let link of links" (click)="handleLinkClick(link)" class="transition-colors text-lg hover:text-white" >
         {{ translate.t(link.key) }}
       </a>
     </div>

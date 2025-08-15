@@ -50,6 +50,14 @@
   "comentarios":{
     "title": "Comentarios"
   },
+  "redes":{
+    "title": "Síguenos en Redes Sociales",
+    "subtitle":"Conecta con nosotros y vive la experiencia incluso antes de llegar",
+    "instagram": "Descubre nuestras fotos y novedades",
+    "facebook":"Entérate de nuestras promociones",
+    "booking":"Lee reseñas y comparte tu experiencia",
+    "whatsapp": "Reserva y haz consultas rápidas"
+  },
   "tarifas": {
     "title": "Nuestras Tarifas",
     "description": "Elige la habitación que mejor se adapte a tus necesidades y disfruta de una estancia confortable en Hotel Italia.",

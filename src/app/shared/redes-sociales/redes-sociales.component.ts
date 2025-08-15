@@ -1,6 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 import { Subscription } from 'rxjs';
+import { faFacebook, faInstagram, faStripe, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faBook, faTruckPickup } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '../../services/translate.service';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -8,10 +11,49 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./redes-sociales.component.css']
 })
 export class RedesSocialesComponent implements OnInit, OnDestroy {
+
   isOpen = false;
   private subscription!: Subscription;
 
-  constructor(private modalService: ModalService) {}
+  iconIg = faInstagram;
+  iconFb = faFacebook;
+  iconTrip = faBook;
+  iconWsp = faWhatsapp;
+
+  // Dentro de tu componente
+socialLinks = [
+  {
+    name: 'Instagram',
+    url: 'https://instagram.com/mauriciovereau.dev',
+    icon: this.iconIg, // <== tu variable de icono
+    gradient: 'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',
+    desc: 'redes.instagram'
+  },
+  {
+    name: 'Facebook',
+    url: 'https://facebook.com',
+    icon: this.iconFb,
+    gradient: 'linear-gradient(45deg,#1877f2,#3b5998)',
+    desc: 'redes.facebook'
+  },
+  {
+    name: 'Booking',
+    url: 'https://booking.com',
+    icon: this.iconTrip,
+    gradient: 'linear-gradient(45deg,#003580,#0059b3,#0071c2,#feba02)',
+    desc: 'redes.booking'
+  },
+  {
+    name: 'WhatsApp',
+    url: 'https://wa.me/51999999999',
+    icon: this.iconWsp,
+    gradient: 'linear-gradient(45deg,#25D366,#128C7E)',
+    desc: 'redes.whatsapp'
+  }
+];
+
+
+  constructor(private modalService: ModalService, public translate: TranslateService) {}
 
   ngOnInit() {
     // Nos suscribimos al observable del modal

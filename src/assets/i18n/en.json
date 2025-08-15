@@ -47,8 +47,16 @@
     "service6": "Comfort and Cleanliness",
     "description6": "Clean, comfortable rooms equipped to make you feel at home."
   },
-  "comentarios":{
+  "comentarios": {
     "title": "Reviews"
+  },
+  "redes": {
+    "title": "Follow Us on Social Media",
+    "subtitle": "Connect with us and experience it even before you arrive",
+    "instagram": "Discover our photos and updates",
+    "facebook": "Stay informed about our promotions",
+    "booking": "Read reviews and share your experience",
+    "whatsapp": "Book and make quick inquiries"
   },
   "tarifas": {
     "title": "Our Rates",

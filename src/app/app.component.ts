@@ -3,6 +3,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '@tailwindplus/elements';
 import { ModalService } from './services/modal.service';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
+import { faConciergeBell } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { faBell } from '@fortawesome/free-regular-svg-icons';
 export class AppComponent {
   title = 'Hoteles Italia';
 
-  iconBell = faBell;
+  iconBell = faConciergeBell;
 
   constructor(private modalService : ModalService){}
 

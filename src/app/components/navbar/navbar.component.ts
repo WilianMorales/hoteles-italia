@@ -3,6 +3,7 @@ import { TranslateService } from '../../services/translate.service';
 import { ModalService } from '../../services/modal.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { faBell } from '@fortawesome/free-regular-svg-icons';
 
 type NavLink = { key: string; path?: string; action?: () => void };
 
