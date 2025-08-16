@@ -7,7 +7,7 @@
     "redes": "Redes Sociales",
     "reservar": "Reservar"
   },
-  "formReserva":{
+  "formReserva": {
     "title": "Reserva tu habitación",
     "subtitle": "Llena el formulario y nos pondremos en contacto contigo.",
     "hotel": "¿En qué hotel deseas reservar?",
@@ -27,35 +27,51 @@
     "welcome": "Bienvenido a",
     "title": "Bienvenido a Hotel Italia",
     "description": "Confort en el corazón de Chiclayo",
-    "button": "Llamar",
+    "buttonWsp": "Enviar mensaje",
+    "buttonTelf": "Llamar",
     "title2": "parte de la Ruta del Papa León XIV",
     "chiclayo": "conocida como la “Capital de la Amistad”, fue hogar pastoral del Papa León XIV. Un lugar donde la historia, la fe y la cultura se encuentran, ideal para tu próxima visita.",
     "button-info": "Más información",
     "title3": "Tu Lugar en Chiclayo",
     "subtitle_section": "Descubre por qué Hotel Italia es la elección preferida en Chiclayo",
     "description_section": "En Hotel Italia combinamos ubicación estratégica, comodidad y un servicio excepcional para que disfrutes de una experiencia única, ya sea por negocios o placer.",
-    "service1": "Ubicación céntrica",
-    "description1": "Estamos ubicados en el corazón de Chiclayo, cerca de los principales puntos de interés.",
-    "service2": "Seguridad 24/7",
-    "description2": "Tu seguridad es nuestra prioridad, contamos con vigilancia las 24 horas.",
-    "service3": "Mejor Precio",
-    "description3": "Ofrecemos las mejores tarifas garantizadas para tu comodidad.",
-    "service4": "Comodidad Conectada",
-    "description4": "Disfruta de Wi-Fi rápido y estable en todo el hotel, en nuestras habitaciones y áreas comunes.",
-    "service5": "Puntualidad en Servicios",
-    "description5": "Nos comprometemos a ofrecerte un servicio puntual y de calidad en cada detalle de tu estancia.",
-    "service6": "Comodidad y Limpieza",
-    "description6": "Habitaciones limpias, cómodas y equipadas para que te sientas como en casa."
+    "servicesTitle": "Comodidades y Beneficios",
+    "wifi": "Wifi gratuito",
+    "wifiDesc": "Conéctate en todo momento gracias a nuestro servicio de wifi gratuito en todas las áreas.",
+    "bath": "Baño privado",
+    "bathDesc": "Disfruta de la comodidad de un baño privado en todas nuestras habitaciones.",
+    "water": "Agua fría y caliente 24 horas",
+    "waterDesc": "Disponibilidad de agua fría y caliente durante las 24 horas del día.",
+    "fan": "Ventilador",
+    "fanDesc": "Todas nuestras habitaciones cuentan con ventilador para tu confort.",
+    "tv": "TV Led",
+    "tvDesc": "Relájate viendo tus programas favoritos en nuestras pantallas LED.",
+    "cleaning": "Limpieza permanente",
+    "cleaningDesc": "Mantenemos nuestras habitaciones y áreas comunes impecables todos los días.",
+    "security": "Cámaras de seguridad",
+    "securityDesc": "Circuito cerrado de cámaras de seguridad en todas las áreas públicas.",
+    "reception": "Recepción 24 horas",
+    "receptionDesc": "Atención personalizada en recepción las 24 horas del día.",
+    "luggage": "Guarda equipaje",
+    "luggageDesc": "Servicio de guarda equipaje gratuito para tu comodidad.",
+    "schedulesTitle": "HORARIOS DE INGRESO Y SALIDA",
+    "schedulesSubtitle": "(Aplica para ambos hoteles)",
+    "checkInLabel": "Check-In",
+    "checkInHour": "9:00 am",
+    "checkInDesc": "El check in es desde 9 am en adelante.",
+    "checkOutLabel": "Check-Out",
+    "checkOutHour": "1:00 pm",
+    "checkOutDesc": "El check out es 1 pm del siguiente día."
   },
-  "comentarios":{
+  "comentarios": {
     "title": "Comentarios"
   },
-  "redes":{
+  "redes": {
     "title": "Síguenos en Redes Sociales",
-    "subtitle":"Conecta con nosotros y vive la experiencia incluso antes de llegar",
+    "subtitle": "Conecta con nosotros y vive la experiencia incluso antes de llegar",
     "instagram": "Descubre nuestras fotos y novedades",
-    "facebook":"Entérate de nuestras promociones",
-    "booking":"Lee reseñas y comparte tu experiencia",
+    "facebook": "Entérate de nuestras promociones",
+    "booking": "Lee reseñas y comparte tu experiencia",
     "whatsapp": "Reserva y haz consultas rápidas"
   },
   "tarifas": {
@@ -66,31 +82,43 @@
       "nombre": "Simple",
       "descripcion": "Ideal para viajeros individuales.",
       "beneficios": [
-        "Tv",
-        "Cama individual 1.5",
-        "Habitación confortable"
+        "1 Cama individual 1.5",
+        "Smart Tv 32\"",
+        "DirecTV",
+        "Wifi",
+        "Baño privado",
+        "Agua fría y caliente 24 horas",
+        "Ventilador"
       ]
     },
     "doble": {
       "nombre": "Doble",
       "descripcion": "Perfecta para dos personas.",
       "beneficios": [
-        "Tv",
         "2 Camas individuales 1.5",
-        "Habitación confortable"
+        "Smart Tv 50\"",
+        "DirecTV",
+        "Wifi",
+        "Baño privado",
+        "Agua fría y caliente 24 horas",
+        "Ventilador"
       ]
     },
     "ejecutiva": {
       "nombre": "Ejecutiva",
       "descripcion": "Lujo y confort para tu estadía.",
       "beneficios": [
-        "Tv LED 32\"",
-        "Cama 2 plazas",
-        "Habitación confortable"
+        "1 Cama 2 plazas",
+        "Smart Tv 43\"",
+        "DirecTV",
+        "Wifi",
+        "Baño privado",
+        "Agua fría y caliente 24 horas",
+        "Ventilador"
       ]
     }
   },
-  "serviceRoom":{
+  "serviceRoom": {
     "title": "Servicios en todas las habitaciones",
     "description": "Disfruta de una estancia cómoda y agradable con nuestros servicios incluidos en todas las habitaciones.",
     "service1": "Wi-Fi gratis en todo el hotel",
@@ -102,7 +130,7 @@
     "service7": "Atención las 24 horas",
     "service8": "Seguridad y tranquilidad"
   },
-  "footer":{
+  "footer": {
     "button": "Llamar",
     "derechos": "Todos los derechos reservados",
     "desarrollado": "Desarrollado por"

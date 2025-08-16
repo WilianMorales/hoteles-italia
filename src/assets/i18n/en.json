@@ -27,25 +27,41 @@
     "welcome": "Welcome to",
     "title": "Welcome to Hotel Italia",
     "description": "Comfort in the heart of Chiclayo",
-    "button": "Call",
+    "buttonWsp": "Send Message",
+    "buttonTelf": "Call",
     "title2": "part of the Route of Pope Leo XIV",
-    "chiclayo": "known as the 'Capital of Friendship', was the pastoral home of Pope Leo XIV. A place where history, faith, and culture meet, ideal for your next visit.",
+    "chiclayo": "known as the “Capital of Friendship”, was the pastoral home of Pope Leo XIV. A place where history, faith, and culture meet, ideal for your next visit.",
     "button-info": "More Information",
     "title3": "Your Place in Chiclayo",
     "subtitle_section": "Discover why Hotel Italia is the preferred choice in Chiclayo",
     "description_section": "At Hotel Italia, we combine strategic location, comfort, and exceptional service to ensure you have a unique experience, whether for business or pleasure.",
-    "service1": "Central Location",
-    "description1": "We are located in the heart of Chiclayo, close to major points of interest.",
-    "service2": "24/7 Security",
-    "description2": "Your security is our priority, we have 24-hour surveillance.",
-    "service3": "Best Price",
-    "description3": "We offer the best guaranteed rates for your comfort.",
-    "service4": "Connected Comfort",
-    "description4": "Enjoy fast and stable Wi-Fi throughout the hotel, in our rooms and common areas.",
-    "service5": "Timely Service",
-    "description5": "We are committed to providing you with timely and quality service in every detail of your stay.",
-    "service6": "Comfort and Cleanliness",
-    "description6": "Clean, comfortable rooms equipped to make you feel at home."
+    "servicesTitle": "Amenities and Benefits",
+    "wifi": "Free Wifi",
+    "wifiDesc": "Stay connected at all times with our free wifi available in all areas.",
+    "bath": "Private bathroom",
+    "bathDesc": "Enjoy the comfort of a private bathroom in every room.",
+    "water": "Hot & cold water 24/7",
+    "waterDesc": "Access to hot and cold water 24 hours a day.",
+    "fan": "Fan",
+    "fanDesc": "All our rooms are equipped with a fan for your comfort.",
+    "tv": "LED TV",
+    "tvDesc": "Relax watching your favorite shows on our LED screens.",
+    "cleaning": "Daily cleaning",
+    "cleaningDesc": "We keep our rooms and common areas spotless every day.",
+    "security": "Security cameras",
+    "securityDesc": "CCTV security cameras in all public areas of the hotel.",
+    "reception": "24-hour reception",
+    "receptionDesc": "Personalized reception service available 24 hours a day.",
+    "luggage": "Luggage storage",
+    "luggageDesc": "Free luggage storage service for your convenience.",
+    "schedulesTitle": "CHECK-IN AND CHECK-OUT TIMES",
+    "schedulesSubtitle": "(Applies to both hotels)",
+    "checkInLabel": "Check-In",
+    "checkInHour": "9:00 am",
+    "checkInDesc": "Check-in is from 9 am onwards.",
+    "checkOutLabel": "Check-Out",
+    "checkOutHour": "1:00 pm",
+    "checkOutDesc": "Check-out is at 1 pm the next day."
   },
   "comentarios": {
     "title": "Reviews"
@@ -66,27 +82,39 @@
       "nombre": "Simple",
       "descripcion": "Ideal for individual travelers.",
       "beneficios": [
-        "TV",
         "Single bed 1.5",
-        "Comfortable room"
+        "Smart Tv 32\"",
+        "DirecTV",
+        "Wifi",
+        "Private bathroom",
+        "24-hour hot and cold water",
+        "Fan"
       ]
     },
     "doble": {
       "nombre": "Double",
       "descripcion": "Perfect for two people.",
       "beneficios": [
-        "TV",
         "2 Single beds 1.5",
-        "Comfortable room"
+        "Smart Tv 50\"",
+        "DirecTV",
+        "Wifi",
+        "Private bathroom",
+        "24-hour hot and cold water",
+        "Fan"
       ]
     },
     "ejecutiva": {
       "nombre": "Executive",
       "descripcion": "Luxury and comfort for your stay.",
       "beneficios": [
-        "32\" LED TV",
         "Double bed",
-        "Comfortable room"
+        "Smart Tv 43\"",
+        "DirecTV",
+        "Wifi",
+        "Private bathroom",
+        "24-hour hot and cold water",
+        "Fan"
       ]
     }
   },

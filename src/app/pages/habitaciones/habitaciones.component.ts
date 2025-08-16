@@ -37,7 +37,11 @@ export class HabitacionesComponent {
       beneficios: [
         'tarifas.simple.beneficios.0',
         'tarifas.simple.beneficios.1',
-        'tarifas.simple.beneficios.2'
+        'tarifas.simple.beneficios.2',
+        'tarifas.simple.beneficios.3',
+        'tarifas.simple.beneficios.4',
+        'tarifas.simple.beneficios.5',
+        'tarifas.simple.beneficios.6'
       ],
       imagenes: [
         'assets/img/habitaciones/habitacion-simple1.jpg',
@@ -54,7 +58,11 @@ export class HabitacionesComponent {
       beneficios: [
         'tarifas.doble.beneficios.0',
         'tarifas.doble.beneficios.1',
-        'tarifas.doble.beneficios.2'
+        'tarifas.doble.beneficios.2',
+        'tarifas.doble.beneficios.3',
+        'tarifas.doble.beneficios.4',
+        'tarifas.doble.beneficios.5',
+        'tarifas.doble.beneficios.6'
       ],
       imagenes: [
         'assets/img/habitaciones/habitacion-doble1.jpg',
@@ -71,7 +79,11 @@ export class HabitacionesComponent {
       beneficios: [
         'tarifas.ejecutiva.beneficios.0',
         'tarifas.ejecutiva.beneficios.1',
-        'tarifas.ejecutiva.beneficios.2'
+        'tarifas.ejecutiva.beneficios.2',
+        'tarifas.ejecutiva.beneficios.3',
+        'tarifas.ejecutiva.beneficios.4',
+        'tarifas.ejecutiva.beneficios.5',
+        'tarifas.ejecutiva.beneficios.6'
       ],
       imagenes: [
         'assets/img/habitaciones/habitacion-ejecutiva1.jpg',

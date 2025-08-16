@@ -12,6 +12,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { TurismoComponent } from './pages/turismo/turismo.component';
 import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
 import { FormReservaComponent } from './shared/form-reserva/form-reserva.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormReservaComponent } from './shared/form-reserva/form-reserva.compone
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule
 ],
   providers: [],
   bootstrap: [AppComponent],

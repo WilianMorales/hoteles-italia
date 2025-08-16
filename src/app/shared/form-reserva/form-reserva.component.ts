@@ -4,6 +4,7 @@ import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
 import { faConciergeBell, faMailBulk, faPhone, faUsers, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '../../services/translate.service';
 import { ModalService } from '../../services/modal.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-reserva',
@@ -12,7 +13,7 @@ import { ModalService } from '../../services/modal.service';
 })
 export class FormReservaComponent implements OnInit, OnDestroy {
 
-  showModal = false; // Ahora lo controlamos desde ModalService
+  showModal = false;
 
   iconCal = faCalendarAlt;
   iconBell = faConciergeBell;
@@ -29,23 +30,23 @@ export class FormReservaComponent implements OnInit, OnDestroy {
   ];
 
   personalFields = [
-    { label: 'Nombre', type: 'text', placeholder: 'Ingresa tu nombre', icon: faUserTie },
-    { label: 'Cantidad de personas', type: 'number', placeholder: 'Ej: 2', icon: faUsers },
-    { label: 'Email', type: 'email', placeholder: 'correo@ejemplo.com', icon: faMailBulk },
-    { label: 'Teléfono', type: 'tel', placeholder: '+51 999 999 999', icon: faPhone }
+    { key: 'name', label: 'Nombre', type: 'text', placeholder: 'Juan Peréz', icon: faUserTie },
+    { key: 'email', label: 'Email', type: 'email', placeholder: 'mail@mail.com', icon: faMailBulk },
+    { key: 'person', label: 'Cantidad de personas', type: 'number', placeholder: 'Ej: 2', icon: faUsers },
+    { key: 'telf', label: 'Teléfono', type: 'tel', placeholder: '+51 999 999 999', icon: faPhone }
   ];
 
   checkInDate: string | null = null;
   checkOutDate: string | null = null;
 
+  reservaForm!: FormGroup;
+
   private subscription!: Subscription;
 
-  constructor(
-    public translate: TranslateService,
-    private modalService: ModalService
-  ) {}
+  constructor(public translate: TranslateService, private modalService: ModalService, private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.initForm();
     this.subscription = this.modalService.modalForm$.subscribe(state => {
       this.showModal = state;
     });
@@ -60,4 +61,66 @@ export class FormReservaComponent implements OnInit, OnDestroy {
   closeModal() {
     this.modalService.closeReservaModal();
   }
+
+  initForm() {
+    this.reservaForm = this.fb.group({
+      sede: [null, Validators.required],             // Radio buttons para Sede
+      tarifa: [null, Validators.required],           // Radio buttons para Tipo de habitación
+      checkInDate: [null, Validators.required],      // Fecha Check-In
+      checkOutDate: [null, Validators.required],     // Fecha Check-Out
+      name: ['', Validators.required],             // Campo Nombre
+      person: [1, [Validators.required, Validators.min(1)]], // Número mínimo 1
+      email: ['', [Validators.required, Validators.email]],             // Validación email
+      telf: ['', Validators.required]            // Campo teléfono
+    });
+  }
+
+  // Método que se ejecuta al enviar el formulario
+  onSubmit() {
+    if (this.reservaForm.valid) {
+      // Obtenemos el valor seleccionado
+      const selectedTarifa = this.reservaForm.value.tarifa;
+
+      // Mapear a código interno
+      let tarifaCodigo: string;
+      switch (selectedTarifa) {
+        case 'tarifas.simple.nombre':
+          tarifaCodigo = "Simple";
+          break;
+        case 'tarifas.doble.nombre':
+          tarifaCodigo = "Doble";
+          break;
+        case 'tarifas.ejecutiva.nombre':
+          tarifaCodigo = "Ejecutiva";
+          break;
+        default:
+          tarifaCodigo = ''; // o manejar error
+      }
+      // Creamos el JSON final que vamos a enviar
+      const payload = {
+        ...this.reservaForm.value,
+        tarifa: tarifaCodigo
+      };
+
+      console.log('Formulario válido, datos a enviar:', payload);
+
+      // Aquí iría tu llamada al backend, p.ej.:
+      // this.reservaService.enviarReserva(payload).subscribe(...)
+    } else {
+      console.log('Formulario inválido');
+      this.reservaForm.markAllAsTouched();
+    }
+  }
+
+  // Método que se ejecuta al enviar el formulario
+  // onSubmit() {
+  //   if (this.reservaForm.valid) {
+  //     console.log('Formulario válido, datos:', this.reservaForm.value);
+  //     // Aquí enviarías los datos a tu backend o servicio
+  //   } else {
+  //     console.log('Formulario inválido');
+  //     this.reservaForm.markAllAsTouched(); // Marca todos los campos para mostrar errores
+  //   }
+  // }
+
 }

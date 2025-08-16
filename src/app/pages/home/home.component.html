@@ -1,21 +1,15 @@
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <!-- Imagen de fondo -->
   <div *ngFor="let img of images; let i = index"
-    class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+    class="absolute inset-0 bg-gray/70 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
     [ngStyle]="{'background-image': 'url(' + img.src + ')'}" [class.opacity-100]="i === currentImageIndex"
     [class.opacity-0]="i !== currentImageIndex">
-
     <!-- Capa tipo "espejo" -->
     <div class="absolute inset-0 backdrop-blur-sm bg-black/60"></div>
-
   </div>
 
-
-  <!-- Capa oscura -->
-  <div class="absolute inset-0 bg-gray/70"></div>
-
   <!-- Contenido principal -->
-  <div class="relative z-10 text-center text-white max-w-3xl px-4 pb-12 sm:pt-0">
+  <div class="relative z-10 text-center max-w-3xl px-2 pb-6 sm:pt-0 mb-6 lg:mb-6">
 
     <h1 class="font-bold mb-4 text-white leading-tight">
       <!-- Versión móvil/tablet -->
@@ -34,51 +28,74 @@
       </span>
 
     </h1>
-    <p class="text-lg lg:text-xl mb-6">
+    <p class="text-lg text-white lg:text-xl mb-6">
       {{ translate.t('home.description') }}
     </p>
 
     <!-- Contenedor de Hoteles -->
-    <div class="flex flex-row">
+    <div class="flex flex-col md:flex-row xl:gap-6 gap-2 max-w-5xl mx-auto mt-6">
 
       <!-- Hotel 1 -->
-      <div class="flex-1 text-center lg:text-left space-y-2">
-        <p class="text-gray-300 text-xs sm:text-sm flex items-center justify-center gap-2">
+      <div class="flex-1 flex flex-col items-center space-y-3 p-3">
+
+        <!-- Dirección (clickeable) -->
+        <p class="flex items-center gap-2 text-gray-300 text-sm">
           <fa-icon [icon]="iconLocation" class="text-white"></fa-icon>
-          7 de Enero
+          <a href="https://maps.app.goo.gl/djB1CfQzk9n3dDRr7" target="_blank" class="underline hover:text-green-400">
+            Arica 1156, Cercado de Chiclayo
+          </a>
         </p>
-        <!-- Teléfono -->
-        <p class="hidden lg:flex items-center justify-center gap-2 text-gray-200">
-          <fa-icon [icon]="iconWsp" class="text-green-400"></fa-icon>
-          (074) 205 717
-        </p>
-        <a href="tel:+5174205717"
-          class="lg:hidden inline-block bg-green-500 text-white text-center py-1 px-3 mt-2 rounded-lg hover:bg-green-600 transition text-sm">
-          <fa-icon [icon]="iconWsp"></fa-icon> {{ translate.t('home.button') }}
-        </a>
+
+        <!-- Contenedor de botones para unificar tamaño -->
+        <div class="flex flex-col gap-2 px-16 w-full justify-center">
+
+          <!-- Teléfono -->
+          <a href="tel:+51074204417"
+            class="flex-1 flex items-center justify-center border border-green-400/60 rounded-lg text-white py-2 px-4 hover:bg-green-600 transition text-sm gap-2">
+            <fa-icon [icon]="iconTelf"></fa-icon> (074) 204417
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/51950703548?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank"
+            class="flex-1 flex items-center justify-center bg-green-400/60 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition text-sm gap-2">
+            <fa-icon [icon]="iconWsp"></fa-icon> 950 703 548
+          </a>
+        </div>
       </div>
 
-      <!-- Separador -->
-      <div class="block w-px bg-gray-600"></div>
+      <!-- Separador vertical en desktop -->
+      <div class="hidden md:block w-px bg-gray-600"></div>
 
       <!-- Hotel 2 -->
-      <div class="flex-1 text-center lg:text-left space-y-2">
+      <div class="flex-1 flex flex-col items-center space-y-3 p-3">
 
-        <p class="text-gray-300 text-xs sm:text-sm flex items-center justify-center gap-2">
+        <!-- Dirección (clickeable) -->
+        <p class="flex items-center gap-2 text-gray-300 text-sm">
           <fa-icon [icon]="iconLocation" class="text-white"></fa-icon>
-          Arica
+          <a href="https://maps.app.goo.gl/7qZ1BfZECxYbjkif6" target="_blank" class="underline hover:text-green-400">
+            7 de enero 1374, Cercado de Chiclayo
+          </a>
         </p>
-        <!-- Teléfono -->
-        <p class="hidden lg:flex items-center justify-center gap-2 text-gray-200">
-          <fa-icon [icon]="iconWsp" class="text-green-400"></fa-icon>
-          (074) 204 417
-        </p>
-        <a href="tel:+5174204417"
-          class="lg:hidden inline-block bg-green-500 text-white text-center py-1 px-3 mt-2 rounded-lg hover:bg-green-600 transition text-sm">
-          <fa-icon [icon]="iconWsp"></fa-icon> {{ translate.t('home.button') }}
-        </a>
+
+        <!-- Contenedor de botones para unificar tamaño -->
+        <div class="flex flex-col gap-2 px-16 w-full justify-center">
+
+          <!-- Teléfono -->
+          <a href="tel:+51074205717 "
+            class="flex-1 flex items-center justify-center border border-green-400/60 rounded-lg text-white py-2 px-4 hover:bg-green-600 transition text-sm gap-2">
+            <fa-icon [icon]="iconTelf"></fa-icon> (074) 205717
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/51983163771?text=Hola,%20quiero%20hacer%20una%20reserva" target="_blank"
+            class="flex-1 flex items-center justify-center bg-green-400/60 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition text-sm gap-2">
+            <fa-icon [icon]="iconWsp"></fa-icon> 983 163 771
+          </a>
+        </div>
       </div>
     </div>
+
+
   </div>
 
   <!-- Flecha abajo -->
@@ -101,9 +118,15 @@
       <p class="text-gray-600 mb-8 leading-relaxed">
         Chiclayo, {{translate.t('home.chiclayo')}}
       </p>
-      <a href=""
-        class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-indigo-200
-                  font-medium rounded-lg px-5 py-2.5 text-center transition-colors">{{translate.t('home.button-info')}}</a>
+      <a routerLink="/turismo" class="inline-flex items-center gap-2 text-white
+          bg-gradient-to-r from-green-500 to-emerald-600
+          hover:from-green-600 hover:to-emerald-700 focus:ring-4 focus:ring-green-300
+          font-medium rounded-lg text-base px-5 py-2.5
+          shadow-md hover:shadow-lg transform hover:scale-105
+          transition-all duration-200">
+        <fa-icon [icon]="iconInfo" class="text-lg"></fa-icon>
+        {{ translate.t('home.button-info') }}
+      </a>
     </div>
 
     <!-- Imagen -->
@@ -117,93 +140,84 @@
   </div>
 </section>
 
-<section>
-  <div class="bg-white py-24 ">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base/7 font-semibold text-gray-600">{{translate.t('home.title3')}}</h2>
-        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance">
-          {{translate.t('home.subtitle_section')}}
-        </p>
-        <p class="mt-6 text-lg/8 text-gray-700">
-          {{translate.t('home.description_section')}}
-        </p>
-      </div>
-      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/ubicacion.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service1')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description1')}}
-            </dd>
+<section class="bg-white py-12">
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Títulos -->
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-gray-600 text-sm sm:text-base font-semibold">{{translate.t('home.title3')}}</h2>
+      <p class="mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
+        {{translate.t('home.subtitle_section')}}
+      </p>
+      <p class="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+        {{translate.t('home.description_section')}}
+      </p>
+    </div>
+
+    <!-- Horarios primero -->
+    <div class="bg-gray-50 border border-green-400 rounded-2xl shadow p-4 sm:p-6 max-w-md mx-auto mt-6">
+      <h3 class="text-xl sm:text-2xl font-semibold text-center mb-1 sm:mb-2">
+        {{ translate.t('home.schedulesTitle') }}
+      </h3>
+      <p class="text-center text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6">
+        {{ translate.t('home.schedulesSubtitle') }}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <!-- Check-In -->
+        <div class="flex-1 flex flex-col p-3 sm:p-4 border rounded-lg hover:shadow-md transition-all bg-transparent/10">
+          <div class="flex items-center justify-between mb-1 sm:mb-2">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-door-open text-green-600 text-base sm:text-lg" aria-hidden="true"></i>
+              <span class="font-medium text-sm sm:text-base">{{ translate.t('home.checkInLabel') }}</span>
+            </div>
+            <span class="text-gray-800 font-semibold text-sm sm:text-base">{{ translate.t('home.checkInHour') }}</span>
           </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/camara-de-seguridad.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service2')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description2')}}
-            </dd>
+          <span class="text-gray-600 text-xs sm:text-sm">{{ translate.t('home.checkInDesc') }}</span>
+        </div>
+
+        <!-- Check-Out -->
+        <div class="flex-1 flex flex-col p-3 sm:p-4 border rounded-lg hover:shadow-md transition-all bg-transparent/10">
+          <div class="flex items-center justify-between mb-1 sm:mb-2">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-door-closed text-red-600 text-base sm:text-lg" aria-hidden="true"></i>
+              <span class="font-medium text-sm sm:text-base">{{ translate.t('home.checkOutLabel') }}</span>
+            </div>
+            <span class="text-gray-800 font-semibold text-sm sm:text-base">{{ translate.t('home.checkOutHour') }}</span>
           </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/mejor-precio.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service3')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description3')}}
-            </dd>
-          </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/comodidades.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service4')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description4')}}
-            </dd>
-          </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/puntualidad.png" alt="Cámara de seguridad"
-                  class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service5')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description5')}}
-            </dd>
-          </div>
-          <div class="relative pl-16">
-            <dt class="text-base/7 font-semibold text-gray-900">
-              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-gray-200">
-                <img src="assets/img/cama.png" alt="Cámara de seguridad" class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
-              </div>
-              {{translate.t('home.service6')}}
-            </dt>
-            <dd class="mt-2 text-base/7 text-gray-600">
-              {{translate.t('home.description6')}}
-            </dd>
-          </div>
-        </dl>
+          <span class="text-gray-600 text-xs sm:text-sm">{{ translate.t('home.checkOutDesc') }}</span>
+        </div>
       </div>
     </div>
+
+    <!-- Servicios después -->
+    <div class="mx-auto mt-10 max-w-2xl lg:max-w-4xl">
+      <h3 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8">
+        {{ translate.t('home.servicesTitle') }}
+      </h3>
+
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        <div *ngFor="let service of services"
+          class="flex flex-row items-center sm:items-start p-3 sm:p-4 border rounded-lg hover:shadow-md hover:scale-105 transition-all duration-200 w-full sm:w-[45%] gap-3">
+
+          <!-- Ícono -->
+          <div class="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-green-100 flex-shrink-0">
+            <fa-icon [icon]="service.icon" class="text-green-500 text-xl sm:text-3xl" aria-label="{{translate.t(service.titleKey)}}"></fa-icon>
+          </div>
+
+          <!-- Texto -->
+          <div class="flex-1 flex flex-col">
+            <dt class="text-left sm:text-left text-base sm:text-lg font-semibold text-gray-900 mb-1">
+              {{ translate.t(service.titleKey) }}
+            </dt>
+            <dd class="text-left sm:text-left text-xs sm:text-sm text-gray-600 leading-relaxed">
+              {{ translate.t(service.descriptionKey) }}
+            </dd>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
