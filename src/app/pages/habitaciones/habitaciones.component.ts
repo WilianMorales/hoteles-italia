@@ -44,11 +44,11 @@ export class HabitacionesComponent {
         'tarifas.simple.beneficios.6'
       ],
       imagenes: [
-        'assets/img/habitaciones/habitacion-simple1.jpg',
-        'assets/img/habitaciones/habitacion-simple2.jpg',
-        'assets/img/habitaciones/habitacion-simple3.jpg',
-        'assets/img/habitaciones/habitacion-simple4.jpg',
-        'assets/img/habitaciones/habitacion-simple5.jpg',
+        'assets/img/habitaciones/habitacion-simple1.webp',
+        'assets/img/habitaciones/habitacion-simple2.webp',
+        'assets/img/habitaciones/habitacion-simple3.webp',
+        'assets/img/habitaciones/habitacion-simple4.webp',
+        'assets/img/habitaciones/habitacion-simple5.webp',
       ]
     },
     {
@@ -65,11 +65,11 @@ export class HabitacionesComponent {
         'tarifas.doble.beneficios.6'
       ],
       imagenes: [
-        'assets/img/habitaciones/habitacion-doble1.jpg',
-        'assets/img/habitaciones/habitacion-doble2.jpg',
-        'assets/img/habitaciones/habitacion-doble3.jpg',
-        'assets/img/habitaciones/habitacion-doble4.jpg',
-        'assets/img/habitaciones/habitacion-doble5.jpg',
+        'assets/img/habitaciones/habitacion-doble1.webp',
+        'assets/img/habitaciones/habitacion-doble2.webp',
+        'assets/img/habitaciones/habitacion-doble3.webp',
+        'assets/img/habitaciones/habitacion-doble4.webp',
+        'assets/img/habitaciones/habitacion-doble5.webp',
       ]
     },
     {
@@ -86,11 +86,11 @@ export class HabitacionesComponent {
         'tarifas.ejecutiva.beneficios.6'
       ],
       imagenes: [
-        'assets/img/habitaciones/habitacion-ejecutiva1.jpg',
-        'assets/img/habitaciones/habitacion-ejecutiva2.jpg',
-        'assets/img/habitaciones/habitacion-ejecutiva3.jpg',
-        'assets/img/habitaciones/habitacion-ejecutiva4.jpg',
-        'assets/img/habitaciones/habitacion-ejecutiva5.jpg',
+        'assets/img/habitaciones/habitacion-ejecutiva1.webp',
+        'assets/img/habitaciones/habitacion-ejecutiva2.webp',
+        'assets/img/habitaciones/habitacion-ejecutiva3.webp',
+        'assets/img/habitaciones/habitacion-ejecutiva4.webp',
+        'assets/img/habitaciones/habitacion-ejecutiva5.webp',
       ]
     }
   ];
