@@ -1,16 +1,94 @@
-<section class="xl:min-h-screen">
-  <!-- Carrusel -->
+<section class="min-h-screen flex flex-col">
+  <!-- Banner (igual) -->
   <div class="relative w-full h-[300px] sm:h-[500px] overflow-hidden">
-    <div  class="absolute inset-0 transition-opacity duration-1000" >
-      <img src="assets/img/inicio/ruta-papa/ruta-papa.webp"
-        class="w-full h-full object-cover
-               object-[30%] sm:object-center">
+    <div class="absolute inset-0 transition-opacity duration-1000">
+      <img src="assets/img/ruta-papa/ruta-papa.webp" class="w-full h-full object-cover object-[30%] sm:object-center">
     </div>
   </div>
 
-  <div class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-center text-3xl font-bold mb-10 text-gray-800">
-      Turismo
+  <!-- Turismo: ocupa el resto -->
+  <div class="flex-1 w-full mx-auto px-4 py-6 flex flex-col justify-center">
+    <h1 class="text-center text-3xl sm:text-4xl font-bold text-gray-800">
+      {{ translate.t('turismo.title') }}
+    </h1>
+    <p class="text-center my-3 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+      {{ translate.t('turismo.descripcion') }}
+    </p>
+
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-center xl:gap-8">
+      <div class="rounded-xl p-4 text-center w-full sm:w-[45%] xl:w-[30%]" *ngFor="let lugar of lugares">
+        <div class="mx-auto w-36 h-36 rounded-full overflow-hidden">
+          <img [src]="lugar.img" [alt]="translate.t(lugar.titulo)" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <h3 class="mt-4 text-lg font-semibold text-gray-800">
+          {{ translate.t(lugar.titulo) }}
+        </h3>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+          {{ translate.t(lugar.descripcion) }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-12">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+      Descubre Chiclayo, la Capital de la Amistad
     </h2>
+    <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      Además de su riqueza espiritual, Chiclayo te invita a recorrer mercados llenos de colores,
+      probar la gastronomía norteña con sabores únicos y descubrir tradiciones vivas en cada rincón.
+      Aquí no solo visitas un destino, ¡vives una experiencia que conecta historia, cultura y calidez humana!
+    </p>
+    <img src="assets/img/ruta-papa/paseo-muzas.webp" alt="Plaza de Chiclayo"
+      class="mx-auto mt-6 rounded-xl shadow-lg w-full sm:w-2/3 object-cover" loading="lazy">
+  </div>
+</section>
+
+
+<section class="py-12 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-center text-2xl sm:text-3xl font-bold text-gray-800 mb-8">
+      Qué más visitar en Lambayeque
+    </h2>
+
+    <div class="flex flex-wrap justify-center gap-8">
+      <article
+        class="w-full sm:w-[45%] lg:w-[30%] bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/img/ruta-papa/museo-sipan.webp" alt="Museo Tumbas Reales de Sipán"
+          class="w-full h-48 object-cover" loading="lazy">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Museo Tumbas Reales de Sipán</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Una joya arquitectónica que alberga los tesoros del Señor de Sipán, considerado el “Tutankamón de América”.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="w-full sm:w-[45%] lg:w-[30%] bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/img/ruta-papa/piramides-tucume.webp" alt="Pirámides de Túcume" class="w-full h-48 object-cover"
+          loading="lazy">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Pirámides de Túcume</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Complejo arqueológico con más de 26 pirámides de barro que narran la grandeza de las culturas prehispánicas.
+          </p>
+        </div>
+      </article>
+
+      <article
+        class="w-full sm:w-[45%] lg:w-[30%] bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/img/ruta-papa/puerto-pimentel.webp" alt="Puerto de Pimentel" class="w-full h-48 object-cover"
+          loading="lazy">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold text-gray-800">Puerto de Pimentel</h3>
+          <p class="mt-2 text-sm text-gray-600">
+            Tradicional balneario con un muelle histórico y playas perfectas para relajarte y disfrutar del mar.
+          </p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>

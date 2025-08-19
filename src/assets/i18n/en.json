@@ -2,7 +2,7 @@
   "navbar": {
     "inicio": "Home",
     "habitaciones": "Rooms",
-    "turismo": "Tourism",
+    "turismo": "Papal Route",
     "contacto": "Contact",
     "redes": "Social Media",
     "reservar": "Book Now"
@@ -129,6 +129,20 @@
     "service6": "Fan in each room",
     "service7": "24-hour front desk service",
     "service8": "Safety and tranquility"
+  },
+  "turismo": {
+    "title": "In the Footsteps of the Pope in Lambayeque",
+    "descripcion": "“Follow the footsteps of Pope Leo XIV through sacred temples, living traditions, and communities that marked his pastoral journey.”",
+    "lugar1Titulo": "Chiclayo Cathedral",
+    "lugar1Descripcion": "A majestic 19th-century neoclassical temple and a religious symbol of the city. Here, Pope Leo XIV served as bishop for over eight years.",
+    "lugar2Titulo": "Municipal Palace",
+    "lugar2Descripcion": "An emblematic historic building that houses an exhibition on his pastoral work. It highlights his solidarity and support during key moments such as the pandemic.",
+    "lugar3Titulo": "Sanctuary of Our Lady of Peace",
+    "lugar3Descripcion": "A temple dedicated to the Virgin and a heart of local spiritual life. Here he strengthened pastoral work and Marian devotion.",
+    "lugar4Titulo": "San Pedro Church of Monsefú",
+    "lugar4Descripcion": "A colonial church with more than 470 years of tradition. Bishop Prevost often participated in Masses and religious festivities here.",
+    "lugar5Titulo": "Santa María Magdalena Church – Ciudad Eten",
+    "lugar5Descripcion": "Home of the Divine Child of the Miracle and a center of Eucharistic fervor. He supported its recognition as the Eucharistic City of the world."
   },
   "footer": {
     "button": "Call",

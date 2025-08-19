@@ -4,6 +4,7 @@ import '@tailwindplus/elements';
 import { ModalService } from './services/modal.service';
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faConciergeBell } from '@fortawesome/free-solid-svg-icons';
+import { FormReservaComponent } from './shared/form-reserva/form-reserva.component';
 
 
 @Component({

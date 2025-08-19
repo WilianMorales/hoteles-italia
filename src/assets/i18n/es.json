@@ -2,7 +2,7 @@
   "navbar": {
     "inicio": "Inicio",
     "habitaciones": "Habitaciones",
-    "turismo": "Turismo",
+    "turismo": "Ruta Papal",
     "contacto": "Contacto",
     "redes": "Redes Sociales",
     "reservar": "Reservar"
@@ -129,6 +129,20 @@
     "service6": "Ventilador por habitación",
     "service7": "Atención las 24 horas",
     "service8": "Seguridad y tranquilidad"
+  },
+  "turismo": {
+    "title": "Tras los pasos del Papa en Lambayeque",
+    "descripcion": "“Sigue los pasos del Papa León XIV a través de templos sagrados, tradiciones vivas y comunidades que marcaron su visita.”",
+    "lugar1Titulo": "Catedral de Chiclayo",
+    "lugar1Descripcion": "Majestuoso templo neoclásico del siglo XIX y símbolo religioso de la ciudad. Aquí, el Papa León XIV ejerció como obispo por más de ocho años.",
+    "lugar2Titulo": "Palacio Municipal",
+    "lugar2Descripcion": "Emblemático edificio histórico que guarda una exposición sobre su labor pastoral. Destaca su apoyo solidario en momentos clave como la pandemia.",
+    "lugar3Titulo": "Santuario Virgen de la Paz",
+    "lugar3Descripcion": "Templo dedicado a la Virgen, corazón de la vida espiritual local. Aquí impulsó la pastoral y fortaleció la devoción mariana.",
+    "lugar4Titulo": "Iglesia San Pedro de Monsefú",
+    "lugar4Descripcion": "Iglesia colonial con más de 470 años de tradición. Monseñor Prevost acompañaba misas y festividades religiosas en esta comunidad.",
+    "lugar5Titulo": "Iglesia Santa María Magdalena - Ciudad Eten",
+    "lugar5Descripcion": "Santuario del Divino Niño del Milagro y centro de fervor eucarístico. Impulsó su reconocimiento como Ciudad Eucarística del mundo."
   },
   "footer": {
     "button": "Llamar",

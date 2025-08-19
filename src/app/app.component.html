@@ -9,15 +9,40 @@
 
   <app-footer></app-footer>
 
-  <a (click)="openModalForm()" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 w-14 h-14 flex items-center justify-center
+  <!-- Botón flotante para abrir modal -->
+  <button command="show-modal" commandfor="formDialog" class="fixed bottom-4 right-4 w-14 h-14 flex items-center justify-center
          text-white bg-gradient-to-r from-green-500 to-emerald-600
          hover:from-green-600 hover:to-emerald-700
          rounded-full shadow-lg hover:shadow-xl
          hover:scale-110 transition-all duration-300 z-40 animate-pulse-ring">
     <fa-icon [icon]="iconBell" class="text-2xl"></fa-icon>
-  </a>
+  </button>
 
-  <!-- 🔹 Modal global -->
-  <app-form-reserva></app-form-reserva>
+  <!-- Modal -->
+  <el-dialog>
+    <dialog id="formDialog" aria-labelledby="dialog-title"
+      class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-black/70 ">
+
+      <div tabindex="0"
+        class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+
+        <!-- Panel con estilos tipo glassmorphism -->
+        <el-dialog-panel class="relative transform overflow-hidden rounded-xl shadow-2xl border border-white/20
+               bg-transparent/60 backdrop-blur-md
+               transition-all
+               data-closed:translate-y-4 data-closed:opacity-0
+               data-enter:duration-300 data-enter:ease-out
+               data-leave:duration-200 data-leave:ease-in
+               sm:my-8 sm:w-full sm:max-w-lg
+               data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+
+          <!-- Aquí tu form como componente -->
+          <app-form-reserva></app-form-reserva>
+
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+
   <app-redes-sociales></app-redes-sociales>
 </div>

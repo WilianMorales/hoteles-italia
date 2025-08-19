@@ -3,7 +3,6 @@ import { TranslateService } from '../../services/translate.service';
 import { ModalService } from '../../services/modal.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
 
 type NavLink = { key: string; path?: string; action?: () => void };
 
@@ -21,9 +20,9 @@ export class NavbarComponent implements OnInit {
   readonly links: NavLink[] = [
     { key: 'navbar.inicio', path: '/' },
     { key: 'navbar.habitaciones', path: '/habitaciones' },
-    { key: 'navbar.turismo', path: '/turismo' },
     { key: 'navbar.contacto', path: '/contacto' },
     { key: 'navbar.redes', action: () => this.modalService.openRedesModal() },
+    { key: 'navbar.turismo', path: '/turismo' },
   ];
 
   constructor(
@@ -67,7 +66,6 @@ export class NavbarComponent implements OnInit {
     this.translate.setLang(lang);
     localStorage.setItem('lang', lang);
   }
-
 
   handleLinkClick(link: NavLink) {
     this.activeLink = link.key;

@@ -10,9 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HabitacionesComponent } from './pages/habitaciones/habitaciones.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { TurismoComponent } from './pages/turismo/turismo.component';
-import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
 import { FormReservaComponent } from './shared/form-reserva/form-reserva.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RedesSocialesComponent } from './shared/redes-sociales/redes-sociales.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HabitacionesComponent,
     ContactoComponent,
-    RedesSocialesComponent,
     FormReservaComponent,
-    TurismoComponent
+    TurismoComponent,
+    RedesSocialesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ComponentsModule,
     HttpClientModule,
     FontAwesomeModule,
-    ReactiveFormsModule
-],
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

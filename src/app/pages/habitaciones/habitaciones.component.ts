@@ -144,11 +144,6 @@ export class HabitacionesComponent {
 
     }, 3000);
 
-
-  }
-
-  scrollToPricing() {
-    document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   mostrarModalTarifa(tarifa: any) {

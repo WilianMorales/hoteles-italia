@@ -11,9 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './form-reserva.component.html',
   styleUrls: ['./form-reserva.component.css']
 })
-export class FormReservaComponent implements OnInit, OnDestroy {
-
-  showModal = false;
+export class FormReservaComponent implements OnInit {
 
   iconCal = faCalendarAlt;
   iconBell = faConciergeBell;
@@ -47,19 +45,7 @@ export class FormReservaComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.initForm();
-    this.subscription = this.modalService.modalForm$.subscribe(state => {
-      this.showModal = state;
-    });
-  }
 
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
-  }
-
-  closeModal() {
-    this.modalService.closeReservaModal();
   }
 
   initForm() {
@@ -104,7 +90,7 @@ export class FormReservaComponent implements OnInit, OnDestroy {
 
       console.log('Formulario válido, datos a enviar:', payload);
 
-      // Aquí iría tu llamada al backend, p.ej.:
+      // Aquí iría la llamada al backend
       // this.reservaService.enviarReserva(payload).subscribe(...)
     } else {
       console.log('Formulario inválido');
