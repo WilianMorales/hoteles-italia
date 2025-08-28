@@ -1,14 +1,14 @@
 <div *ngIf="isOpen" role="dialog" aria-modal="true" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-  <div class="bg-transparent/60  p-6 rounded-xl relative w-[90%] max-w-sm shadow-2xl border border-white/20 backdrop-blur-md">
+  <div class="bg-transparent/10 p-6 rounded-xl relative w-[90%] max-w-sm shadow-2xl border border-white/20 backdrop-blur-md">
 
     <!-- Botón cerrar -->
-    <button (click)="close()" aria-label="Cerrar redes sociales" class="absolute top-2 right-2 text-gray-700 dark:text-gray-300 hover:text-red-500 transition">
+    <button (click)="close()" aria-label="Cerrar redes sociales" class="absolute top-2 right-4 text-slate-200 hover:text-red-500 transition">
       ✕
     </button>
 
     <!-- Encabezado -->
-    <h2 class="text-lg font-bold mb-2 text-center text-gray-900 dark:text-white">{{ translate.t('redes.title')}}</h2>
-    <p class="text-sm text-center text-gray-700 dark:text-gray-300 mb-4">
+    <h2 class="text-lg tracking-wide font-bold mb-2 text-center text-slate-200">{{ translate.t('redes.title')}}</h2>
+    <p class="text-sm tracking-wide text-center text-slate-400 mb-4">
       {{ translate.t('redes.subtitle')}}
     </p>
 
@@ -22,7 +22,7 @@
           <fa-icon [icon]="item.icon" class="text-xl"></fa-icon>
           <div class="flex flex-col">
             <span>{{item.name}}</span>
-            <span class="text-xs opacity-80">{{translate.t(item.desc)}}</span>
+            <span class="text-sm opacity-80">{{translate.t(item.desc)}}</span>
           </div>
         </a>
       </li>

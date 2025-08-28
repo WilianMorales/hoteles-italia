@@ -10,11 +10,14 @@ import { LatLngTuple } from 'leaflet';
 export class ContactoComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    const map = L.map('map', { scrollWheelZoom: false });
+    const map = L.map('map', { scrollWheelZoom: false, zoomControl: false});
+
+    L.control.zoom({
+      position: 'bottomleft'
+    }).addTo(map);
 
     // Capa base oscura
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
       maxZoom: 16
     }).addTo(map);
 
@@ -26,7 +29,7 @@ export class ContactoComponent implements AfterViewInit {
 
     // Icono personalizado
     const hotelIcon = L.icon({
-      iconUrl: 'assets/img/hotel.png', // tu ícono
+      iconUrl: 'assets/img/hotelgps.png',
       iconSize: [38, 38],
       iconAnchor: [19, 38],
       popupAnchor: [0, -35]

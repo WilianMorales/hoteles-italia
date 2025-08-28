@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService } from '../../services/translate.service';
-import { faBath, faBroom, faCircleInfo, faConciergeBell, faDroplet, faFan, faHeadset, faLocationDot, faPhone, faShower, faStar, faSuitcase, faTint, faTv, faUserShield, faVideo, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { faBath, faBroom, faCircleInfo, faConciergeBell, faFan, faLocationDot, faPhone, faStar, faSuitcase, faTint, faVideo, faWifi } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -26,18 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     { src: 'assets/img/inicio/recepcion-7enero2.webp', alt: 'Imagen 4' },
   ]
 
-  // servicios = [
-  //   { nombre: 'serviceRoom.service1', icono: faWifi },
-  //   { nombre: 'serviceRoom.service2', icono: faTv },
-  //   { nombre: 'serviceRoom.service3', icono: faBroom },
-  //   { nombre: 'serviceRoom.service4', icono: faShower },
-  //   { nombre: 'serviceRoom.service5', icono: faDroplet },
-  //   { nombre: 'serviceRoom.service6', icono: faFan },
-  //   { nombre: 'serviceRoom.service7', icono: faHeadset },
-  //   { nombre: 'serviceRoom.service8', icono: faUserShield }
-  // ];
-
-    services = [
+  services = [
     { icon: faWifi, titleKey: 'home.wifi', descriptionKey: 'home.wifiDesc' },
     { icon: faBath, titleKey: 'home.bath', descriptionKey: 'home.bathDesc' },
     { icon: faTint, titleKey: 'home.water', descriptionKey: 'home.waterDesc' },
