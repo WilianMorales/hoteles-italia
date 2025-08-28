@@ -147,6 +147,12 @@
   "footer": {
     "button": "Call",
     "derechos": "All rights reserved",
-    "desarrollado": "Developed by"
+    "desarrollado": "Developed by",
+    "nav": "Navigation:",
+    "ubicacion": "Find us:",
+    "info": "Legal Information:",
+    "info2": "About Us",
+    "info3": "Terms and Conditions",
+    "info4": "Privacy Policy"
   }
 }

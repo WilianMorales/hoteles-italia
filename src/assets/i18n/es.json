@@ -147,6 +147,12 @@
   "footer": {
     "button": "Llamar",
     "derechos": "Todos los derechos reservados",
-    "desarrollado": "Desarrollado por"
+    "desarrollado": "Desarrollado por",
+    "nav": "Navegación:",
+    "ubicacion": "Ubícanos:",
+    "info": "Información legal:",
+    "info2": "Quiénes somos",
+    "info3": "Términos y condiciones",
+    "info4": "Política Web de Privacidad"
   }
 }

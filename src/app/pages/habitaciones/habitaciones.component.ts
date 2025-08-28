@@ -1,5 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { faBroom, faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
+import { faChevronLeft, faChevronRight, faStar } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '../../services/translate.service';
 import { faEye } from '@fortawesome/free-regular-svg-icons';
 

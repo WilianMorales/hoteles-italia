@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '@tailwindplus/elements';
 import { ModalService } from './services/modal.service';
-import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { faConciergeBell } from '@fortawesome/free-solid-svg-icons';
-import { FormReservaComponent } from './shared/form-reserva/form-reserva.component';
-
 
 @Component({
   selector: 'app-root',
@@ -14,7 +10,6 @@ import { FormReservaComponent } from './shared/form-reserva/form-reserva.compone
 })
 export class AppComponent {
   title = 'Hoteles Italia';
-
   iconBell = faConciergeBell;
 
   constructor(private modalService : ModalService){}

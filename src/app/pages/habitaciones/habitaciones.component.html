@@ -4,7 +4,7 @@
     <div *ngFor="let img of imagenes; let i = index" class="absolute inset-0 transition-opacity duration-1000"
       [class.opacity-100]="i === currentIndex" [class.opacity-0]="i !== currentIndex">
       <img [src]="img" loading="lazy"
-        class="w-full h-full object-cover transform scale-100 hover:scale-105 transition duration-[4000ms]">
+        class="w-full h-full object-cover transform scale-100 hover:scale-105 transition duration-[4000ms]" alt="imagen referencial de habitaciones">
       <!-- Overlay degradado mejorado -->
       <div class="absolute inset-0 backdrop-blur-sm bg-black/60"></div>
     </div>
